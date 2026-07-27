@@ -216,18 +216,6 @@ img { max-width: 100%; height: auto; display: block; }
     overflow: hidden;
 }
 
-.band-orn {
-    position: absolute;
-    top: 50%;
-    width: 190px;
-    opacity: .35;
-    transform: translateY(-50%);
-    pointer-events: none;
-}
-
-.band-orn_l { left: -30px; }
-.band-orn_r { right: -30px; }
-
 .band-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -560,7 +548,6 @@ img { max-width: 100%; height: auto; display: block; }
     .hero-poster img { box-shadow: 10px 10px 0 var(--primary); }
 
     .band-grid { grid-template-columns: repeat(2, 1fr); gap: 32px 16px; }
-    .band-orn { display: none; }
 
     .partners { grid-template-columns: repeat(3, 1fr); }
 }
