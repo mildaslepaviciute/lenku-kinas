@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tvarkaraštis — Lenkų kino festivalis 2026</title>
+<meta name="description" content="Lenkų kino festivalio 2026 seansų tvarkaraštis — pasirinkite miestą ir datą, kad rastumėte artimiausius seansus.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+    <div class="wrap header-inner">
+        <a href="index.html" class="logo" aria-label="Lenkų kinas — pradžia">
+            <img src="assets/img/logo-lt.svg" alt="Lenkų kinas" width="124" height="80">
+        </a>
+
+        <nav class="main-nav" id="main-nav" aria-label="Pagrindinė navigacija">
+            <a href="index.html">Pradžia</a>
+            <a href="repertuaras.html">Repertuaras</a>
+            <a href="tvarkarastis.html" class="is-active" aria-current="page">Tvarkaraštis</a>
+            <a href="apie.html">Apie festivalį</a>
+        </nav>
+
+        <div class="header-right">
+            <div class="lang" aria-label="Kalbos pasirinkimas">
+                <a href="https://www.lenkukinas.lt/" lang="pl" hreflang="pl">PL</a>
+                <span class="lang-sep" aria-hidden="true"></span>
+                <a href="#" class="is-active" lang="lt" hreflang="lt" aria-current="page">LT</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Meniu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <!-- INTRO -->
+    <section class="page-hero">
+        <div class="wrap">
+            <p class="eyebrow">2026 m. spalio 14—29&ensp;·&ensp;8 miestai visoje Lietuvoje</p>
+            <h1>Filmų tvarkaraštis</h1>
+            <p class="lead">Pasirinkite miestą ir datą, kad rastumėte artimiausius festivalio seansus.</p>
+        </div>
+    </section>
+
+    <!-- FILTRAS -->
+    <div class="filters">
+        <div class="wrap">
+            <nav class="city-filter" id="city-filter" aria-label="Filtruoti pagal miestą"></nav>
+            <div class="subfilter date-filter">
+                <span class="subfilter-label" id="date-label">Data:</span>
+                <div class="pill-group">
+                <div class="datepicker" id="datepicker">
+                    <button type="button" class="datepicker-toggle" id="date-toggle" aria-haspopup="dialog" aria-expanded="false">
+                        <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1.5" y="2.5" width="13" height="12" rx="2"/><path d="M1.5 6h13M5 1v3M11 1v3"/></svg>
+                        <span id="date-toggle-text">Pasirinkti datą</span>
+                    </button>
+                    <div class="datepicker-pop" id="date-popover" role="dialog" aria-labelledby="date-label" hidden></div>
+                </div>
+                <button type="button" class="pill" id="date-clear" hidden>Visos datos ×</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEANSŲ SĄRAŠAS -->
+    <section class="section repertoire">
+        <div class="wrap" id="schedule-list"></div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="wrap footer-inner">
+        <p class="footer-brand">Lenkų kinas</p>
+        <nav class="footer-nav" aria-label="Footer navigacija">
+            <a href="index.html">Pradžia</a>
+            <a href="repertuaras.html">Repertuaras</a>
+            <a href="tvarkarastis.html">Tvarkaraštis</a>
+            <a href="apie.html">Apie festivalį</a>
+            <a href="apie.html#kontaktai">Kontaktai</a>
+        </nav>
+    </div>
+    <div class="wrap footer-bottom">
+        <p>© 2007–2026 Lenkijos institutas. Visos teisės saugomos.</p>
+        <a href="#">Privatumo politika</a>
+    </div>
+</footer>
+
+<script src="assets/data/films.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/tvarkarastis.js"></script>
+</body>
+</html>

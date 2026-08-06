@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Filmas — Lenkų kino festivalis 2026</title>
+<meta name="description" content="Filmo aprašymas, kūrybinė komanda ir artimiausi seansai — Lenkų kino festivalis 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+    <div class="wrap header-inner">
+        <a href="index.html" class="logo" aria-label="Lenkų kinas — pradžia">
+            <img src="assets/img/logo-lt.svg" alt="Lenkų kinas" width="124" height="80">
+        </a>
+
+        <nav class="main-nav" id="main-nav" aria-label="Pagrindinė navigacija">
+            <a href="index.html">Pradžia</a>
+            <a href="repertuaras.html" class="is-active">Repertuaras</a>
+            <a href="tvarkarastis.html">Tvarkaraštis</a>
+            <a href="apie.html">Apie festivalį</a>
+        </nav>
+
+        <div class="header-right">
+            <div class="lang" aria-label="Kalbos pasirinkimas">
+                <a href="https://www.lenkukinas.lt/" lang="pl" hreflang="pl">PL</a>
+                <span class="lang-sep" aria-hidden="true"></span>
+                <a href="#" class="is-active" lang="lt" hreflang="lt" aria-current="page">LT</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Meniu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main id="film-page">
+    <!-- Turinys generuojamas iš FILMS_FEED pagal ?id= parametrą (assets/js/filmas.js) -->
+</main>
+
+<footer class="site-footer">
+    <div class="wrap footer-inner">
+        <p class="footer-brand">Lenkų kinas</p>
+        <nav class="footer-nav" aria-label="Footer navigacija">
+            <a href="index.html">Pradžia</a>
+            <a href="repertuaras.html">Repertuaras</a>
+            <a href="tvarkarastis.html">Tvarkaraštis</a>
+            <a href="apie.html">Apie festivalį</a>
+            <a href="apie.html#kontaktai">Kontaktai</a>
+        </nav>
+    </div>
+    <div class="wrap footer-bottom">
+        <p>© 2007–2026 Lenkijos institutas. Visos teisės saugomos.</p>
+        <a href="#">Privatumo politika</a>
+    </div>
+</footer>
+
+<script src="assets/data/films.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/filmas.js"></script>
+</body>
+</html>

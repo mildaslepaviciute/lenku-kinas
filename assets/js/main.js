@@ -17,30 +17,30 @@ nav.addEventListener('click', (e) => {
     }
 });
 
-// Miestų filtras — filmai ir tvarkaraštis
-const pills = document.querySelectorAll('.pill');
-const movies = document.querySelectorAll('.movie');
-const rows = document.querySelectorAll('.schedule tbody tr');
-const emptyMsg = document.getElementById('movies-empty');
+// Versijų perjungiklis
+// partneriai: v1 — juosta po skaičių, v2 — blokas prieš footer, v3 — juosta virš navbaro
+// skaiciai:   v1 — kortelės, v2 — gradiento juosta
+const switcherBtns = document.querySelectorAll('.switcher button');
+const VARIANTS = ['v1', 'v2', 'v3'];
 
-pills.forEach((pill) => {
-    pill.addEventListener('click', () => {
-        pills.forEach((p) => p.classList.remove('is-active'));
-        pill.classList.add('is-active');
-
-        const city = pill.dataset.city;
-        let visible = 0;
-
-        movies.forEach((movie) => {
-            const show = city === 'visi' || movie.dataset.cities.split(' ').includes(city);
-            movie.hidden = !show;
-            if (show) visible++;
-        });
-
-        rows.forEach((row) => {
-            row.hidden = !(city === 'visi' || row.dataset.city === city);
-        });
-
-        emptyMsg.hidden = visible > 0;
+function setVariant(group, variant) {
+    VARIANTS.forEach((v) => document.body.classList.remove(group + '-' + v));
+    document.body.classList.add(group + '-' + variant);
+    switcherBtns.forEach((b) => {
+        if (b.dataset.group === group) b.classList.toggle('is-active', b.dataset.variant === variant);
     });
+    try { localStorage.setItem('variant-' + group, variant); } catch (e) {}
+}
+
+switcherBtns.forEach((btn) => {
+    btn.addEventListener('click', () => setVariant(btn.dataset.group, btn.dataset.variant));
+});
+
+['partneriai', 'skaiciai'].forEach((group) => {
+    try {
+        const saved = localStorage.getItem('variant-' + group);
+        if (VARIANTS.includes(saved) && document.querySelector('.switcher button[data-group="' + group + '"][data-variant="' + saved + '"]')) {
+            setVariant(group, saved);
+        }
+    } catch (e) {}
 });

@@ -1,18 +1,19 @@
 /* ==========================================================================
-   LENKŲ KINAS — 2026 refresh
-   Spalvos paveldėtos iš originalaus dizaino:
-   #E75829 (pagrindinė), #bf6e4e (antrinė), firminis gradientas 90deg.
+   LENKŲ KINAS — home
+   Pagrindinė: #A42331 · Akcentas: #E75829 · Gradientas: crimson → orange
    ========================================================================== */
 
 :root {
-    --primary: #E75829;
-    --secondary: #bf6e4e;
-    --grad: linear-gradient(90deg, #E75829 37%, #bf6e4e);
-    --ink: #1d1613;
-    --ink-soft: #6d605a;
+    --main: #A42331;
+    --main-dark: #841b27;
+    --accent: #E75829;
+    --grad: linear-gradient(100deg, #A42331 10%, #E75829 130%);
+    --grad-soft: linear-gradient(100deg, #A42331, #c73f2d 60%, #E75829);
+    --ink: #211316;
+    --ink-soft: #6f5f5d;
     --paper: #fff;
-    --cream: #f8f3ee;
-    --line: #e9ded6;
+    --cream: #faf4ef;
+    --line: #ecdfd8;
     --display: "Anton", "Arial Narrow", sans-serif;
     --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
     --wrap: 1200px;
@@ -87,7 +88,7 @@ img { max-width: 100%; height: auto; display: block; }
     transition: color .15s, border-color .15s;
 }
 
-.main-nav a:hover { color: var(--primary); border-bottom-color: var(--primary); }
+.main-nav a:hover { color: var(--main); border-bottom-color: var(--main); }
 
 .header-right { display: flex; align-items: center; gap: 24px; }
 
@@ -101,8 +102,8 @@ img { max-width: 100%; height: auto; display: block; }
     color: var(--ink-soft);
 }
 
-.lang a:hover { color: var(--primary); }
-.lang a.is-active { color: var(--primary); }
+.lang a:hover { color: var(--main); }
+.lang a.is-active { color: var(--main); }
 .lang-sep { width: 1px; height: 14px; background: var(--line); }
 
 .nav-toggle {
@@ -126,6 +127,70 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* --------------------------------------------------------------------------
+   Partnerių bėganti juosta (V1)
+   -------------------------------------------------------------------------- */
+
+.marquee {
+    overflow: hidden;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    padding: 22px 0;
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 36s linear infinite;
+}
+
+.marquee:hover .marquee-track { animation-play-state: paused; }
+
+.marquee-group {
+    display: flex;
+    align-items: center;
+    gap: 72px;
+    flex: none;
+    padding-right: 72px;
+}
+
+.marquee-group img {
+    height: 36px;
+    width: auto;
+    filter: grayscale(1);
+    opacity: .55;
+    transition: filter .2s, opacity .2s;
+}
+
+.marquee-group img:hover { filter: none; opacity: 1; }
+
+.marquee-chip {
+    display: flex;
+    align-items: center;
+    background: var(--ink);
+    padding: 6px 14px;
+    border-radius: 4px;
+}
+
+.marquee-chip img { filter: none; opacity: .9; height: 28px; }
+
+.marquee-top {
+    background: var(--cream);
+    padding: 12px 0;
+}
+
+.marquee-top .marquee-group img { height: 28px; }
+.marquee-top .marquee-chip { padding: 5px 12px; }
+.marquee-top .marquee-chip img { height: 22px; }
+
+@keyframes marquee {
+    to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; }
+}
+
+/* --------------------------------------------------------------------------
    Hero
    -------------------------------------------------------------------------- */
 
@@ -144,7 +209,7 @@ img { max-width: 100%; height: auto; display: block; }
     font-weight: 700;
     letter-spacing: .14em;
     text-transform: uppercase;
-    color: var(--primary);
+    color: var(--main);
 }
 
 .hero h1 {
@@ -159,7 +224,10 @@ img { max-width: 100%; height: auto; display: block; }
 
 .hero h1 em {
     font-style: normal;
-    color: var(--primary);
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .lead {
@@ -173,71 +241,108 @@ img { max-width: 100%; height: auto; display: block; }
 
 .btn {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 15px 24px;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: .12em;
     text-transform: uppercase;
     text-decoration: none;
-    transition: background .15s, color .15s, border-color .15s;
+    transition: background .15s, color .15s, border-color .15s, box-shadow .15s;
 }
 
 .btn-solid {
-    background: var(--primary);
+    background: var(--main);
     color: #fff;
 }
 
-.btn-solid:hover { background: #c94517; }
+.btn-solid:hover { background: var(--main-dark); }
 
 .btn-ghost {
     border: 2px solid var(--ink);
     color: var(--ink);
-    padding: 13px 28px;
+    padding: 13px 22px;
 }
 
-.btn-ghost:hover { border-color: var(--primary); color: var(--primary); }
+.btn-ghost:hover { border-color: var(--main); color: var(--main); }
 
-.hero-poster { position: relative; }
+.btn-light {
+    background: #fff;
+    color: var(--main);
+}
+
+.btn-light:hover { background: var(--cream); }
 
 .hero-poster img {
     width: 100%;
-    box-shadow: 14px 14px 0 var(--primary);
+    box-shadow: 14px 14px 0 var(--main);
 }
 
 /* --------------------------------------------------------------------------
-   Facts band
+   Skaičiai — v1: kortelės, v2: gradiento juosta prie hero apačios
    -------------------------------------------------------------------------- */
 
-.band {
-    position: relative;
-    background: var(--grad);
-    color: #fff;
-    padding: 44px 0;
-    overflow: hidden;
-}
-
-.band-grid {
+.facts-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    text-align: center;
 }
 
 .fact strong {
     display: block;
     font-family: var(--display);
     font-weight: 400;
-    font-size: 44px;
     line-height: 1;
 }
 
 .fact span {
     display: block;
-    margin-top: 6px;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: .1em;
     text-transform: uppercase;
+}
+
+/* v1 — kortelės */
+body.skaiciai-v1 .facts { padding: 0 0 88px; }
+
+body.skaiciai-v1 .facts-grid { gap: 20px; }
+
+body.skaiciai-v1 .fact {
+    padding: 32px 24px 28px;
+    background: var(--cream);
+    border-top: 4px solid;
+    border-image: var(--grad) 1;
+    text-align: center;
+}
+
+body.skaiciai-v1 .fact strong {
+    font-size: 48px;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+body.skaiciai-v1 .fact span {
+    margin-top: 10px;
+    color: var(--ink-soft);
+}
+
+/* v2 — gradiento juosta */
+body.skaiciai-v2 .facts {
+    background: var(--grad-soft);
+    color: #fff;
+    padding: 44px 0;
+}
+
+body.skaiciai-v2 .facts-grid {
+    gap: 24px;
+    text-align: center;
+}
+
+body.skaiciai-v2 .fact strong { font-size: 44px; }
+
+body.skaiciai-v2 .fact span {
+    margin-top: 6px;
     opacity: .85;
 }
 
@@ -279,46 +384,10 @@ img { max-width: 100%; height: auto; display: block; }
     background: var(--grad);
 }
 
-.section-note {
-    margin: 0;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-}
+.section-head .btn { flex: none; }
 
 /* --------------------------------------------------------------------------
-   City filter
-   -------------------------------------------------------------------------- */
-
-.city-filter { display: flex; flex-wrap: wrap; gap: 8px; }
-
-.pill {
-    padding: 9px 18px;
-    font-family: var(--body);
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-    color: var(--ink);
-    background: none;
-    border: 1.5px solid var(--line);
-    border-radius: 999px;
-    cursor: pointer;
-    transition: border-color .15s, color .15s, background .15s;
-}
-
-.pill:hover { border-color: var(--primary); color: var(--primary); }
-
-.pill.is-active {
-    background: var(--ink);
-    border-color: var(--ink);
-    color: #fff;
-}
-
-/* --------------------------------------------------------------------------
-   Movies
+   Festivalio filmai
    -------------------------------------------------------------------------- */
 
 .movies {
@@ -354,7 +423,7 @@ img { max-width: 100%; height: auto; display: block; }
     left: 0;
     bottom: 0;
     padding: 7px 14px;
-    background: var(--primary);
+    background: var(--main);
     color: #fff;
     font-size: 12px;
     font-weight: 700;
@@ -374,70 +443,692 @@ img { max-width: 100%; height: auto; display: block; }
     transition: color .15s;
 }
 
-.movie:hover h3 { color: var(--primary); }
+.movie:hover h3 { color: var(--main); }
 
 .movie h3 span { color: var(--ink-soft); font-size: .8em; }
 
 .movie-meta {
-    margin: 0 0 4px;
+    margin: 0 0 12px;
     font-size: 14px;
     color: var(--ink-soft);
 }
 
-.movie-cities {
-    margin: 0;
+.movie-more {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--main);
+}
+
+.movie-more::after {
+    content: " →";
+    transition: margin .15s;
+}
+
+.movie:hover .movie-more::after { margin-left: 4px; }
+
+/* --------------------------------------------------------------------------
+   Repertuaro puslapis
+   -------------------------------------------------------------------------- */
+
+.page-hero { padding: 64px 0 40px; }
+
+.page-hero h1 {
+    margin: 0 0 20px;
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(40px, 4.8vw, 64px);
+    line-height: 1.02;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+}
+
+.page-hero .lead { margin-bottom: 0; max-width: 62ch; }
+
+.filters {
+    position: sticky;
+    top: 88px;
+    z-index: 40;
+    background: rgba(255, 255, 255, .94);
+    backdrop-filter: blur(8px);
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.city-filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.pill {
+    padding: 9px 18px;
+    font-family: var(--body);
     font-size: 13px;
     font-weight: 600;
     letter-spacing: .06em;
     text-transform: uppercase;
-    color: var(--secondary);
+    color: var(--ink);
+    background: none;
+    border: 1.5px solid var(--line);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: border-color .15s, color .15s, background .15s;
 }
 
-.movies-empty {
-    margin: 32px 0 0;
+.pill:hover { border-color: var(--main); color: var(--main); }
+
+.pill.is-active {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: #fff;
+}
+
+.pill-count {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 11px;
+    opacity: .55;
+}
+
+.subfilter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.subfilter[hidden] { display: none; }
+
+.subfilter-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-right: 6px;
+}
+
+.subfilter .pill { padding: 7px 14px; font-size: 12px; }
+
+.repertoire { padding-top: 48px; }
+
+.group-head { margin: 56px 0 28px; max-width: 720px; }
+.group-head:first-child { margin-top: 0; }
+
+.group-head h2 {
+    position: relative;
+    margin: 0;
+    padding-bottom: 14px;
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(26px, 3vw, 36px);
+    text-transform: uppercase;
+    letter-spacing: .01em;
+}
+
+.group-head h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 72px;
+    height: 4px;
+    background: var(--grad);
+}
+
+.group-head p {
+    margin: 14px 0 0;
     color: var(--ink-soft);
 }
 
-.movie[hidden] { display: none; }
+.group-count {
+    font-family: var(--body);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--main);
+    vertical-align: super;
+}
+
+.group-head--sub { margin: 36px 0 20px; }
+
+.group-head--sub h2 {
+    font-size: 21px;
+    padding-bottom: 0;
+    color: var(--main);
+}
+
+.group-head--sub h2::after { display: none; }
+
+.movies-repertoire { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+/* Kortelės vietoj kadro — plakato pakaitalas */
+.movie-media--ph {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 24px 24px 56px;
+    color: #fff;
+}
+
+.ph-title {
+    font-family: var(--display);
+    font-size: 26px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    opacity: .92;
+}
+
+.ph-year {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .14em;
+    opacity: .6;
+}
+
+.movie-badges {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.badge {
+    padding: 5px 10px;
+    background: #fff;
+    color: var(--main);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    box-shadow: 0 2px 8px rgba(33, 19, 22, .18);
+}
+
+.main-nav a.is-active { color: var(--main); border-bottom-color: var(--main); }
 
 /* --------------------------------------------------------------------------
-   Schedule
+   Filmo vidinis
    -------------------------------------------------------------------------- */
 
-.schedule { overflow-x: auto; }
+.film-hero { padding: 64px 0 72px; }
 
-.schedule table {
+.film-hero_grid {
+    display: grid;
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+    gap: 64px;
+    align-items: start;
+}
+
+.film-hero .eyebrow a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.film-hero .eyebrow a:hover { text-decoration: underline; }
+
+.film-hero h1 {
+    margin: 0 0 8px;
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(40px, 4.8vw, 64px);
+    line-height: 1.02;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+}
+
+.film-orig {
+    margin: 0 0 20px;
+    font-size: 19px;
+    font-style: italic;
+    color: var(--ink-soft);
+}
+
+.film-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 8px;
+}
+
+.film-badges .badge { box-shadow: none; border: 1px solid var(--line); }
+
+.film-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 24px;
+    margin: 28px 0 36px;
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.film-meta dt {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 4px;
+}
+
+.film-meta dd {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.film-poster img { width: 100%; box-shadow: 14px 14px 0 var(--main); }
+
+.film-poster-ph {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    aspect-ratio: 1;
+    padding: 32px;
+    color: #fff;
+    box-shadow: 14px 14px 0 rgba(33, 19, 22, .16);
+}
+
+.film-poster-ph .ph-title { font-size: 36px; }
+
+/* Daugiau informacijos */
+
+.film-info { padding-top: 0; }
+
+.film-info_grid {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+    gap: 64px;
+    align-items: start;
+}
+
+.film-description {
+    margin: 0 0 32px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+}
+
+.film-trailer {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: var(--ink);
+    overflow: hidden;
+}
+
+.film-trailer iframe {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    border-collapse: collapse;
+    height: 100%;
+    border: 0;
+}
+
+.film-trailer--ph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.film-trailer--ph .play {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .12);
+    border: 2px solid rgba(255, 255, 255, .6);
+    position: relative;
+}
+
+.film-trailer--ph .play::after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-left: 16px solid #fff;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.film-aside { display: grid; gap: 28px; }
+
+.aside-block {
+    background: var(--cream);
+    border-top: 4px solid;
+    border-image: var(--grad) 1;
+    padding: 24px 24px 26px;
+}
+
+.aside-block h3 {
+    margin: 0 0 16px;
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 19px;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+}
+
+.aside-block ul {
+    margin: 0;
+    padding: 0 0 0 18px;
+    color: var(--ink-soft);
+    font-size: 15px;
+}
+
+.aside-block li { margin-bottom: 8px; }
+.aside-block li:last-child { margin-bottom: 0; }
+
+.film-meta--col {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Artimiausi seansai */
+
+.screenings {
+    display: grid;
+    gap: 12px;
+}
+
+.screening {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) auto minmax(0, 4fr) auto;
+    align-items: center;
+    gap: 24px;
+    padding: 18px 24px;
     background: #fff;
     border: 1px solid var(--line);
 }
 
-.schedule th {
-    padding: 16px 20px;
-    text-align: left;
+.screening-date {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.screening-time {
+    font-family: var(--display);
+    font-size: 22px;
+    color: var(--main);
+}
+
+.screening-place {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 15px;
+    color: var(--ink-soft);
+}
+
+.screening-place strong {
+    display: block;
+    color: var(--ink);
+    font-weight: 700;
+}
+
+.venue-logo-slot {
+    flex: none;
+    width: 64px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.venue-logo {
+    max-width: 64px;
+    max-height: 40px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.venue-logo-slot--dark {
+    background: var(--ink);
+    border-radius: 4px;
+    padding: 6px 8px;
+}
+
+.venue-logo-slot--dark .venue-logo { max-height: 22px; }
+
+.btn-small { padding: 11px 18px; font-size: 12px; }
+
+/* Tvarkaraščio puslapis */
+
+/* Filtrų eilutės lygiavimas: label — fiksuotas stulpelis, burbuliukai prasideda toje pačioje linijoje */
+#city-filter,
+.date-filter {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+#city-filter > .subfilter-label,
+.date-filter > .subfilter-label {
+    flex: 0 0 88px;
+    margin-right: 0;
+    padding-top: 9px;
+}
+
+.pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.datepicker { position: relative; }
+
+.datepicker-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: #fff;
+    border: 1.5px solid var(--line);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: border-color .15s, color .15s, background .15s;
+}
+
+.datepicker-toggle:hover { border-color: var(--main); color: var(--main); }
+
+.datepicker-toggle:focus-visible,
+.datepicker-day:focus-visible {
+    outline: 2px solid var(--main);
+    outline-offset: 2px;
+}
+
+.datepicker-toggle.has-value {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: #fff;
+}
+
+.datepicker-pop {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    z-index: 60;
+    width: 292px;
+    max-width: calc(100vw - 32px);
+    padding: 18px 18px 12px;
+    background: #fff;
+    border: 1.5px solid var(--line);
+    border-radius: 16px;
+    box-shadow: 0 14px 40px rgba(33, 19, 22, .14);
+}
+
+.datepicker-pop[hidden] { display: none; }
+
+.datepicker-month + .datepicker-month { margin-top: 16px; }
+
+.datepicker-title {
+    margin: 0 0 10px;
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: .12em;
+    letter-spacing: .1em;
     text-transform: uppercase;
+    color: var(--ink-soft);
+}
+
+.datepicker-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    justify-items: center;
+}
+
+.datepicker-wd {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    padding-bottom: 4px;
+}
+
+.datepicker-day {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    background: var(--cream);
+    border: 1.5px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: border-color .15s, color .15s, background .15s;
+}
+
+.datepicker-day:hover { border-color: var(--main); color: var(--main); }
+
+.datepicker-day.is-selected {
+    background: var(--grad);
     color: #fff;
-    background: var(--ink);
-    white-space: nowrap;
 }
 
-.schedule td {
-    padding: 16px 20px;
-    font-size: 15px;
-    border-top: 1px solid var(--line);
-    white-space: nowrap;
+.datepicker-day.is-selected:hover { border-color: transparent; color: #fff; }
+
+.datepicker-day.is-off {
+    background: none;
+    color: var(--ink-soft);
+    opacity: .35;
+    cursor: default;
 }
 
-.schedule td:nth-child(2) { font-weight: 700; color: var(--primary); }
-.schedule td:nth-child(3) { font-weight: 600; }
+.datepicker-day.is-off:hover { border-color: transparent; }
 
-.schedule tbody tr { transition: background .15s; }
-.schedule tbody tr:hover { background: #fdf1ea; }
-.schedule tr[hidden] { display: none; }
+.datepicker-hint {
+    margin: 12px 0 0;
+    font-size: 11px;
+    color: var(--ink-soft);
+}
+
+.sched-day { margin: 44px 0 16px; }
+.sched-day:first-child { margin-top: 0; }
+
+.sched-day h2 {
+    color: var(--ink);
+    font-size: 24px;
+}
+
+.screening--schedule {
+    grid-template-columns: auto minmax(0, 5fr) minmax(0, 4fr) minmax(150px, auto);
+}
+
+.screening--schedule .screening-time { min-width: 64px; }
+
+.screening--schedule .screening-place {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.venue-logo-slot {
+    flex: 0 0 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.venue-logo {
+    max-height: 32px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.screening-film a {
+    font-family: var(--display);
+    font-size: 19px;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    text-decoration: none;
+    color: var(--ink);
+    transition: color .15s;
+}
+
+.screening-film a:hover { color: var(--main); }
+
+.screening-film small {
+    display: block;
+    margin-top: 2px;
+    font-size: 13px;
+    color: var(--ink-soft);
+}
+
+.screening-note {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--main);
+}
+
+.free-label {
+    justify-self: start;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--main);
+    border: 1.5px dashed var(--main);
+    border-radius: 999px;
+    white-space: nowrap;
+}
 
 .schedule-note {
     margin: 20px 0 0;
@@ -446,10 +1137,221 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* --------------------------------------------------------------------------
-   Partners
+   Apie festivalį
    -------------------------------------------------------------------------- */
 
-.partners-section { padding-top: 0; }
+.org-logo {
+    width: 128px;
+    height: auto;
+    margin: 4px 0 18px;
+}
+
+/* Istorijos laiko juosta */
+
+.timeline {
+    display: grid;
+    gap: 0;
+    max-width: 820px;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 32px;
+    position: relative;
+    padding: 0 0 44px 0;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 148px;
+    top: 10px;
+    bottom: -10px;
+    width: 2px;
+    background: var(--line);
+}
+
+.timeline-item:last-child::before { display: none; }
+
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    left: 143px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--grad);
+}
+
+.timeline-year {
+    font-family: var(--display);
+    font-size: 28px;
+    line-height: 1;
+    color: var(--main);
+    text-align: right;
+    padding-right: 24px;
+}
+
+.timeline-item > div { padding-left: 24px; }
+
+.timeline-item h3 {
+    margin: 0 0 8px;
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+}
+
+.timeline-item p { margin: 0; color: var(--ink-soft); }
+
+/* Nuotraukų galerija */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    margin: 0;
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--cream);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .45s cubic-bezier(.2, .6, .2, 1);
+}
+
+.gallery-item:hover img { transform: scale(1.04); }
+
+.gallery-item figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 24px 16px 12px;
+    background: linear-gradient(transparent, rgba(23, 10, 12, .72));
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .04em;
+}
+
+.gallery-ph { display: flex; }
+
+.gallery-ph::before {
+    content: "Vieta nuotraukai";
+    margin: auto;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .55);
+    border: 1.5px dashed rgba(255, 255, 255, .4);
+    border-radius: 999px;
+    padding: 8px 16px;
+}
+
+/* Organizatoriai ir kontaktai */
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.contacts-grid .aside-block p {
+    margin: 0 0 14px;
+    color: var(--ink-soft);
+    font-size: 15px;
+}
+
+.contacts-grid .aside-block p:last-child { margin-bottom: 0; }
+
+.contacts-grid a { color: var(--main); text-decoration: none; font-weight: 600; }
+.contacts-grid a:hover { text-decoration: underline; }
+
+/* --------------------------------------------------------------------------
+   Seansų CTA
+   -------------------------------------------------------------------------- */
+
+.cta-band {
+    background: var(--grad-soft);
+    color: #fff;
+    padding: 88px 0;
+}
+
+.cta-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.cta-band h2 {
+    margin: 0 0 12px;
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.cta-band p {
+    margin: 0;
+    max-width: 52ch;
+    font-size: 17px;
+    opacity: .9;
+}
+
+/* --------------------------------------------------------------------------
+   Apie festivalį
+   -------------------------------------------------------------------------- */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: 64px;
+    align-items: start;
+}
+
+.about-grid h2 {
+    position: relative;
+    margin: 0;
+    padding-bottom: 14px;
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(30px, 3.4vw, 42px);
+    text-transform: uppercase;
+}
+
+.about-grid h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 72px;
+    height: 4px;
+    background: var(--grad);
+}
+
+.about-body p { margin: 0 0 20px; color: var(--ink-soft); }
+.about-body p:first-child { margin-top: -6px; font-size: 19px; color: var(--ink); }
+.about-body .btn { margin-top: 8px; }
+
+/* --------------------------------------------------------------------------
+   Partneriai (V2 blokas)
+   -------------------------------------------------------------------------- */
 
 .partners {
     display: grid;
@@ -464,6 +1366,7 @@ img { max-width: 100%; height: auto; display: block; }
     justify-content: center;
     padding: 28px 24px;
     min-height: 120px;
+    background: #fff;
     border-right: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
 }
@@ -485,6 +1388,71 @@ img { max-width: 100%; height: auto; display: block; }
 .partner-dark:hover img { opacity: 1; }
 
 /* --------------------------------------------------------------------------
+   Variantai + perjungiklis
+   -------------------------------------------------------------------------- */
+
+/* v1: juosta po skaičių · v2: blokas prieš footer · v3: juosta virš navbaro */
+body.partneriai-v1 .marquee-top,
+body.partneriai-v1 #partneriai { display: none; }
+body.partneriai-v2 .marquee { display: none; }
+body.partneriai-v3 .marquee-mid,
+body.partneriai-v3 #partneriai { display: none; }
+
+.switcher {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 14px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 6px 24px rgba(33, 19, 22, .14);
+}
+
+.switcher-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+}
+
+.switcher-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-right: 10px;
+}
+
+.switcher button {
+    padding: 6px 14px;
+    font-family: var(--body);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: none;
+    border: 1.5px solid var(--line);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background .15s, color .15s, border-color .15s;
+}
+
+.switcher button:hover { border-color: var(--main); color: var(--main); }
+
+.switcher button.is-active {
+    background: var(--main);
+    border-color: var(--main);
+    color: #fff;
+}
+
+/* --------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */
 
@@ -498,39 +1466,68 @@ img { max-width: 100%; height: auto; display: block; }
 .footer-inner {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 24px;
-    padding-top: 40px;
+    align-items: flex-start;
+    gap: 40px;
+    padding-top: 56px;
     padding-bottom: 40px;
 }
 
 .footer-brand {
     margin: 0;
     font-family: var(--display);
-    font-size: 24px;
+    font-size: 26px;
     text-transform: uppercase;
     letter-spacing: .04em;
 }
 
-.footer-meta {
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
     margin-left: auto;
-    text-align: right;
-    font-size: 14px;
-    color: rgba(255, 255, 255, .6);
 }
 
-.footer-meta p { margin: 0; }
-
-.footer-top {
+.footer-nav a {
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: .1em;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--primary);
+    color: rgba(255, 255, 255, .7);
 }
 
-.footer-top:hover { color: #fff; }
+.footer-nav a:hover { color: #fff; }
+
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 32px;
+    margin-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, .12);
+    font-size: 13px;
+    color: rgba(255, 255, 255, .55);
+}
+
+.footer-bottom p { margin: 0; }
+
+.footer-bottom a {
+    color: rgba(255, 255, 255, .55);
+}
+
+.footer-bottom a:hover { color: #fff; }
+
+/* --------------------------------------------------------------------------
+   Plakatų pakaitalų tonai (po komponentų, kad permuštų jų fonus)
+   -------------------------------------------------------------------------- */
+
+.tone-1 { background: linear-gradient(150deg, #A42331, #E75829); }
+.tone-2 { background: linear-gradient(150deg, #351418, #A42331); }
+.tone-3 { background: linear-gradient(150deg, #bf6e4e, #841b27); }
+.tone-4 { background: linear-gradient(150deg, #841b27, #351418); }
+.tone-5 { background: linear-gradient(150deg, #c73f2d, #bf6e4e); }
 
 /* --------------------------------------------------------------------------
    Responsive
@@ -545,9 +1542,35 @@ img { max-width: 100%; height: auto; display: block; }
     }
 
     .hero-poster { order: -1; }
-    .hero-poster img { box-shadow: 10px 10px 0 var(--primary); }
+    .hero-poster img { box-shadow: 10px 10px 0 var(--main); }
 
-    .band-grid { grid-template-columns: repeat(2, 1fr); gap: 32px 16px; }
+    .facts-grid { grid-template-columns: repeat(2, 1fr); gap: 32px 16px; }
+
+    .about-grid { grid-template-columns: 1fr; gap: 32px; }
+
+    .timeline-item { grid-template-columns: 72px 1fr; gap: 20px; }
+    .timeline-item::before { left: 88px; }
+    .timeline-item::after { left: 83px; }
+    .timeline-year { font-size: 22px; padding-right: 12px; }
+    .timeline-item > div { padding-left: 12px; }
+
+    .gallery { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .contacts-grid { grid-template-columns: 1fr; }
+
+    .film-hero_grid { grid-template-columns: 1fr; gap: 40px; }
+    .film-hero .film-poster { order: -1; }
+    .film-info_grid { grid-template-columns: 1fr; gap: 40px; }
+    .film-meta { grid-template-columns: repeat(2, 1fr); }
+
+    .screening {
+        grid-template-columns: 1fr auto;
+        gap: 8px 16px;
+    }
+    .screening-place { grid-column: 1 / -1; }
+    .screening .btn-small { grid-column: 1 / -1; justify-self: start; }
+    .screening .free-label { grid-column: 1 / -1; justify-self: start; }
+    .screening--schedule { grid-template-columns: auto 1fr; }
+    .screening--schedule .screening-film { grid-column: 2; }
 
     .partners { grid-template-columns: repeat(3, 1fr); }
 }
@@ -580,43 +1603,19 @@ img { max-width: 100%; height: auto; display: block; }
     .site-header.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
     .site-header.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    .section { padding: 64px 0; }
+    .filters { top: 76px; }
+
+    .marquee { padding: 12px 0; }
+    .marquee-group { gap: 48px; padding-right: 48px; }
+    .marquee-group img { height: 28px; }
+    .marquee-chip img { height: 22px; }
+
+    .section, .cta-band { padding: 64px 0; }
 
     .section-head { flex-direction: column; align-items: flex-start; }
 
-    /* Tvarkaraštis — kortelės vietoje lentelės */
-    .schedule table, .schedule tbody, .schedule tr, .schedule td { display: block; }
-    .schedule thead { display: none; }
-    .schedule table { border: 0; background: none; }
-
-    .schedule tr {
-        background: #fff;
-        border: 1px solid var(--line);
-        margin-bottom: 12px;
-        padding: 6px 0;
-    }
-
-    .schedule td {
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-        border: 0;
-        padding: 8px 18px;
-        white-space: normal;
-    }
-
-    .schedule td::before {
-        content: attr(data-th);
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: .1em;
-        text-transform: uppercase;
-        color: var(--ink-soft);
-        padding-top: 3px;
-    }
-
     .partners { grid-template-columns: repeat(2, 1fr); }
 
-    .footer-inner { flex-direction: column; text-align: center; }
-    .footer-meta { margin-left: 0; text-align: center; }
+    .footer-inner { flex-direction: column; gap: 24px; }
+    .footer-nav { margin-left: 0; }
 }

@@ -3,14 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lenkų kinas — Lenkų kino festivalis 2024</title>
-<meta name="description" content="Lenkų kino festivalis 2024 — geriausi lenkų filmai Vilniuje, Kaune, Šalčininkuose ir Mažeikiuose. 2024.09.25–10.06.">
+<title>Lenkų kinas — Lenkų kino festivalis 2026</title>
+<meta name="description" content="Lenkų kino festivalis 2026 — 52 filmai aštuoniuose Lietuvos miestuose. Spalio 14–29 d. Vilniuje, Kaune, Klaipėdoje, Panevėžyje, Marijampolėje, Alytuje, Šalčininkuose ir Mažeikiuose.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="partneriai-v1 skaiciai-v2">
+
+<!-- V3: partnerių juosta virš navbaro (ne sticky) -->
+<div class="marquee marquee-top" aria-label="Partneriai ir rėmėjai">
+    <div class="marquee-track">
+        <div class="marquee-group">
+            <img src="assets/img/partner-orlen-lietuva.png" alt="Orlen Lietuva">
+            <img src="assets/img/partner-orlen-baltic.jpg" alt="Orlen Baltic Retail">
+            <img src="assets/img/partner-dkp.png" alt="Dom Kultury Polskiej w Wilnie">
+            <img src="assets/img/partner-multikino.png" alt="Multikino">
+            <img src="assets/img/partner-skalvija.png" alt="Kino centras Skalvija">
+            <span class="marquee-chip"><img src="assets/img/partner-kc.png" alt="Kultūros centras"></span>
+            <img src="assets/img/partner-mazeikiai.jpg" alt="Mažeikių rajono savivaldybė">
+            <img src="assets/img/partner-15min.png" alt="15min">
+            <img src="assets/img/partner-tvp.jpg" alt="TVP Wilno">
+            <img src="assets/img/partner-zw.png" alt="zw.lt">
+            <img src="assets/img/partner-wilnoteka.jpg" alt="Wilnoteka">
+            <img src="assets/img/partner-kw.png" alt="Kurier Wileński">
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+            <img src="assets/img/partner-orlen-lietuva.png" alt="">
+            <img src="assets/img/partner-orlen-baltic.jpg" alt="">
+            <img src="assets/img/partner-dkp.png" alt="">
+            <img src="assets/img/partner-multikino.png" alt="">
+            <img src="assets/img/partner-skalvija.png" alt="">
+            <span class="marquee-chip"><img src="assets/img/partner-kc.png" alt=""></span>
+            <img src="assets/img/partner-mazeikiai.jpg" alt="">
+            <img src="assets/img/partner-15min.png" alt="">
+            <img src="assets/img/partner-tvp.jpg" alt="">
+            <img src="assets/img/partner-zw.png" alt="">
+            <img src="assets/img/partner-wilnoteka.jpg" alt="">
+            <img src="assets/img/partner-kw.png" alt="">
+        </div>
+    </div>
+</div>
 
 <header class="site-header" id="top">
     <div class="wrap header-inner">
@@ -19,9 +53,10 @@
         </a>
 
         <nav class="main-nav" id="main-nav" aria-label="Pagrindinė navigacija">
-            <a href="#festivalis">Festivalis 2024</a>
-            <a href="#all">Visas repertuaras</a>
-            <a href="#tvarkarastis">Filmų tvarkaraštis</a>
+            <a href="#top">Pradžia</a>
+            <a href="repertuaras.html">Repertuaras</a>
+            <a href="tvarkarastis.html">Tvarkaraštis</a>
+            <a href="apie.html">Apie festivalį</a>
         </nav>
 
         <div class="header-right">
@@ -40,15 +75,15 @@
 <main>
 
     <!-- HERO -->
-    <section class="hero" id="festivalis">
+    <section class="hero">
         <div class="wrap hero-grid">
             <div class="hero-copy">
-                <p class="eyebrow">2024.09.25 — 10.06&ensp;·&ensp;Vilnius&ensp;·&ensp;Kaunas&ensp;·&ensp;Šalčininkai&ensp;·&ensp;Mažeikiai</p>
-                <h1>Lenkų kino <em>festivalis</em> 2024</h1>
-                <p class="lead">Ryškiausi pastarųjų metų lenkų kino kūriniai — nuo apdovanojimus pelniusių dramų iki animacijos — keturiuose Lietuvos miestuose. Renginius organizuoja Lenkijos institutas Vilniuje.</p>
+                <p class="eyebrow">2026 m. spalio 14—29&ensp;·&ensp;8 miestai visoje Lietuvoje</p>
+                <h1>Lenkų kino <em>festivalis</em> 2026</h1>
+                <p class="lead">Ryškiausi pastarųjų metų lenkų kino kūriniai — Vilniuje, Kaune, Klaipėdoje, Panevėžyje, Marijampolėje, Alytuje, Šalčininkuose ir Mažeikiuose.</p>
                 <div class="hero-actions">
-                    <a class="btn btn-solid" href="#all">Visas repertuaras</a>
-                    <a class="btn btn-ghost" href="#tvarkarastis">Filmų tvarkaraštis</a>
+                    <a class="btn btn-solid" href="repertuaras.html">Žiūrėti repertuarą</a>
+                    <a class="btn btn-ghost" href="tvarkarastis.html">Seansų tvarkaraštis</a>
                 </div>
             </div>
             <div class="hero-poster">
@@ -57,32 +92,60 @@
         </div>
     </section>
 
-    <!-- FACTS BAND -->
-    <section class="band">
-        <div class="wrap band-grid">
-            <div class="fact"><strong>12</strong><span>festivalio dienų</span></div>
-            <div class="fact"><strong>4</strong><span>Lietuvos miestai</span></div>
-            <div class="fact"><strong>12</strong><span>partnerių ir rėmėjų</span></div>
-            <div class="fact"><strong>18-as</strong><span>festivalio sezonas</span></div>
+    <!-- INFO JUOSTA -->
+    <section class="facts">
+        <div class="wrap facts-grid">
+            <div class="fact"><strong>16</strong><span>festivalio dienų</span></div>
+            <div class="fact"><strong>8</strong><span>Lietuvos miestai</span></div>
+            <div class="fact"><strong>52</strong><span>filmai programoje</span></div>
+            <div class="fact"><strong>20-as</strong><span>festivalio sezonas</span></div>
         </div>
     </section>
 
-    <!-- REPERTUARAS -->
-    <section class="section" id="all">
+    <!-- V1: partnerių bėganti juosta po skaičių -->
+    <div class="marquee marquee-mid" aria-label="Partneriai ir rėmėjai">
+        <div class="marquee-track">
+            <div class="marquee-group">
+                <img src="assets/img/partner-orlen-lietuva.png" alt="Orlen Lietuva">
+                <img src="assets/img/partner-orlen-baltic.jpg" alt="Orlen Baltic Retail">
+                <img src="assets/img/partner-dkp.png" alt="Dom Kultury Polskiej w Wilnie">
+                <img src="assets/img/partner-multikino.png" alt="Multikino">
+                <img src="assets/img/partner-skalvija.png" alt="Kino centras Skalvija">
+                <span class="marquee-chip"><img src="assets/img/partner-kc.png" alt="Kultūros centras"></span>
+                <img src="assets/img/partner-mazeikiai.jpg" alt="Mažeikių rajono savivaldybė">
+                <img src="assets/img/partner-15min.png" alt="15min">
+                <img src="assets/img/partner-tvp.jpg" alt="TVP Wilno">
+                <img src="assets/img/partner-zw.png" alt="zw.lt">
+                <img src="assets/img/partner-wilnoteka.jpg" alt="Wilnoteka">
+                <img src="assets/img/partner-kw.png" alt="Kurier Wileński">
+            </div>
+            <div class="marquee-group" aria-hidden="true">
+                <img src="assets/img/partner-orlen-lietuva.png" alt="">
+                <img src="assets/img/partner-orlen-baltic.jpg" alt="">
+                <img src="assets/img/partner-dkp.png" alt="">
+                <img src="assets/img/partner-multikino.png" alt="">
+                <img src="assets/img/partner-skalvija.png" alt="">
+                <span class="marquee-chip"><img src="assets/img/partner-kc.png" alt=""></span>
+                <img src="assets/img/partner-mazeikiai.jpg" alt="">
+                <img src="assets/img/partner-15min.png" alt="">
+                <img src="assets/img/partner-tvp.jpg" alt="">
+                <img src="assets/img/partner-zw.png" alt="">
+                <img src="assets/img/partner-wilnoteka.jpg" alt="">
+                <img src="assets/img/partner-kw.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- FESTIVALIO FILMAI -->
+    <section class="section section-alt" id="filmai">
         <div class="wrap">
             <div class="section-head">
-                <h2>Visas repertuaras</h2>
-                <nav class="city-filter" aria-label="Filtruoti pagal miestą">
-                    <button class="pill is-active" data-city="visi">Visi miestai</button>
-                    <button class="pill" data-city="vilnius">Vilnius</button>
-                    <button class="pill" data-city="kaunas">Kaunas</button>
-                    <button class="pill" data-city="salcininkai">Šalčininkai</button>
-                    <button class="pill" data-city="mazeikiai">Mažeikiai</button>
-                </nav>
+                <h2>Festivalio filmai</h2>
+                <a class="btn btn-ghost" href="repertuaras.html">Visi filmai</a>
             </div>
 
-            <div class="movies" id="movies">
-                <a class="movie" href="#tvarkarastis" data-cities="vilnius salcininkai mazeikiai">
+            <div class="movies">
+                <a class="movie" href="filmas.html?id=czerwone-maki">
                     <figure class="movie-media">
                         <img src="assets/img/film-czerwone-maki.jpg" alt="Kadras iš filmo „Raudonos aguonos“" loading="lazy" width="400" height="400">
                         <figcaption class="movie-tag">Karo drama</figcaption>
@@ -90,11 +153,11 @@
                     <div class="movie-body">
                         <h3>Raudonos aguonos <span>(Czerwone maki)</span></h3>
                         <p class="movie-meta">2024 · Lenkija · rež. Krzysztof Łukaszewicz</p>
-                        <p class="movie-cities">Vilnius · Šalčininkai · Mažeikiai</p>
+                        <span class="movie-more">Plačiau</span>
                     </div>
                 </a>
 
-                <a class="movie" href="#tvarkarastis" data-cities="vilnius kaunas salcininkai">
+                <a class="movie" href="filmas.html?id=chlopi">
                     <figure class="movie-media">
                         <img src="assets/img/film-chlopi.png" alt="Kadras iš filmo „Kaimiečiai“" loading="lazy" width="400" height="400">
                         <figcaption class="movie-tag">Animacinis, drama</figcaption>
@@ -102,79 +165,38 @@
                     <div class="movie-body">
                         <h3>Kaimiečiai <span>(Chłopi)</span></h3>
                         <p class="movie-meta">2023 · Lenkija, Lietuva, Serbija · 110 min.</p>
-                        <p class="movie-cities">Vilnius · Kaunas · Šalčininkai</p>
+                        <span class="movie-more">Plačiau</span>
                     </div>
                 </a>
             </div>
-            <p class="movies-empty" id="movies-empty" hidden>Pasirinktame mieste seansų šiuo metu nėra.</p>
         </div>
     </section>
 
-    <!-- TVARKARASTIS -->
-    <section class="section section-alt" id="tvarkarastis">
-        <div class="wrap">
-            <div class="section-head">
-                <h2>Filmų tvarkaraštis</h2>
-                <p class="section-note">2024 m. festivalio programa</p>
+    <!-- SEANSŲ CTA -->
+    <section class="cta-band" id="seansai">
+        <div class="wrap cta-inner">
+            <div>
+                <h2>Suplanuok festivalio vakarą</h2>
+                <p>Visi seansai aštuoniuose Lietuvos miestuose — vienoje vietoje. Įėjimas į visus seansus — nemokamas.</p>
             </div>
-
-            <div class="schedule">
-                <table>
-                    <thead>
-                        <tr><th>Data</th><th>Laikas</th><th>Filmas</th><th>Miestas</th><th>Vieta</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr data-city="vilnius">
-                            <td data-th="Data">09.25, trečiadienis</td>
-                            <td data-th="Laikas">19:00</td>
-                            <td data-th="Filmas">Raudonos aguonos</td>
-                            <td data-th="Miestas">Vilnius</td>
-                            <td data-th="Vieta">Multikino</td>
-                        </tr>
-                        <tr data-city="vilnius">
-                            <td data-th="Data">09.27, penktadienis</td>
-                            <td data-th="Laikas">18:30</td>
-                            <td data-th="Filmas">Kaimiečiai</td>
-                            <td data-th="Miestas">Vilnius</td>
-                            <td data-th="Vieta">Kino centras „Skalvija“</td>
-                        </tr>
-                        <tr data-city="kaunas">
-                            <td data-th="Data">09.29, sekmadienis</td>
-                            <td data-th="Laikas">17:00</td>
-                            <td data-th="Filmas">Kaimiečiai</td>
-                            <td data-th="Miestas">Kaunas</td>
-                            <td data-th="Vieta">Kauno kino teatras</td>
-                        </tr>
-                        <tr data-city="salcininkai">
-                            <td data-th="Data">10.02, trečiadienis</td>
-                            <td data-th="Laikas">18:00</td>
-                            <td data-th="Filmas">Raudonos aguonos</td>
-                            <td data-th="Miestas">Šalčininkai</td>
-                            <td data-th="Vieta">Šalčininkų kultūros centras</td>
-                        </tr>
-                        <tr data-city="salcininkai">
-                            <td data-th="Data">10.03, ketvirtadienis</td>
-                            <td data-th="Laikas">18:00</td>
-                            <td data-th="Filmas">Kaimiečiai</td>
-                            <td data-th="Miestas">Šalčininkai</td>
-                            <td data-th="Vieta">Šalčininkų kultūros centras</td>
-                        </tr>
-                        <tr data-city="mazeikiai">
-                            <td data-th="Data">10.06, sekmadienis</td>
-                            <td data-th="Laikas">16:00</td>
-                            <td data-th="Filmas">Raudonos aguonos</td>
-                            <td data-th="Miestas">Mažeikiai</td>
-                            <td data-th="Vieta">Mažeikių kultūros centras</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="schedule-note">Į visus seansus įėjimas nemokamas. Vietų skaičius ribotas.</p>
+            <a class="btn btn-light" href="repertuaras.html">Visas repertuaras</a>
         </div>
     </section>
 
-    <!-- PARTNERIAI -->
-    <section class="section partners-section">
+    <!-- APIE FESTIVALĮ -->
+    <section class="section" id="apie">
+        <div class="wrap about-grid">
+            <h2>Apie festivalį</h2>
+            <div class="about-body">
+                <p>Lenkų kino festivalis — kasmetinis Lenkijos instituto Vilniuje organizuojamas renginys, jau dvidešimtą sezoną pristatantis ryškiausius lenkų kino kūrinius Lietuvos žiūrovams.</p>
+                <p>Festivalio programoje — apdovanojimus pelniusios dramos, animacija ir dokumentika, rodoma originalo kalba su lietuviškais subtitrais. Seansai vyksta ne tik didžiuosiuose miestuose, bet ir regionuose, o įėjimas į visus — nemokamas.</p>
+                <a class="btn btn-ghost" href="apie.html">Apie festivalį</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- V2: partnerių blokas prieš footer -->
+    <section class="section section-alt" id="partneriai">
         <div class="wrap">
             <div class="section-head">
                 <h2>Partneriai ir rėmėjai</h2>
@@ -198,14 +220,35 @@
 
 </main>
 
+<!-- Versijų perjungiklis -->
+<div class="switcher">
+    <div class="switcher-row" role="group" aria-label="Partnerių pateikimo variantas">
+        <span class="switcher-label">Partneriai</span>
+        <button type="button" data-group="partneriai" data-variant="v1" class="is-active">v1</button>
+        <button type="button" data-group="partneriai" data-variant="v2">v2</button>
+        <button type="button" data-group="partneriai" data-variant="v3">v3</button>
+    </div>
+    <div class="switcher-row" role="group" aria-label="Skaičių pateikimo variantas">
+        <span class="switcher-label">Skaičiai</span>
+        <button type="button" data-group="skaiciai" data-variant="v1">v1</button>
+        <button type="button" data-group="skaiciai" data-variant="v2" class="is-active">v2</button>
+    </div>
+</div>
+
 <footer class="site-footer">
     <div class="wrap footer-inner">
         <p class="footer-brand">Lenkų kinas</p>
-        <div class="footer-meta">
-            <p>© 2007–2026 Lenkijos institutas</p>
-            <p>Visos teisės saugomos</p>
-        </div>
-        <a class="footer-top" href="#top">Į viršų ↑</a>
+        <nav class="footer-nav" aria-label="Footer navigacija">
+            <a href="#top">Pradžia</a>
+            <a href="repertuaras.html">Repertuaras</a>
+            <a href="tvarkarastis.html">Tvarkaraštis</a>
+            <a href="apie.html">Apie festivalį</a>
+            <a href="apie.html#kontaktai">Kontaktai</a>
+        </nav>
+    </div>
+    <div class="wrap footer-bottom">
+        <p>© 2007–2026 Lenkijos institutas. Visos teisės saugomos.</p>
+        <a href="#">Privatumo politika</a>
     </div>
 </footer>
 
