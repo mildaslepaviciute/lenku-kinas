@@ -26,6 +26,9 @@
     }
 
     function renderFilters() {
+        // Išsaugom juostų slinkties poziciją, kad perpiešus nešoktų į pradžią (mobile swipe)
+        const programScroll = programFilterEl.scrollLeft;
+        const authorScroll = authorFilterEl.scrollLeft;
         programFilterEl.innerHTML = '';
         programFilterEl.appendChild(pill('Visi filmai', feed.films.length, state.program === 'visi', () => {
             state.program = 'visi';
@@ -55,6 +58,8 @@
                 }));
             });
         }
+        programFilterEl.scrollLeft = programScroll;
+        authorFilterEl.scrollLeft = authorScroll;
     }
 
     // --- Kortelės ---

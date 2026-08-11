@@ -3144,3 +3144,16 @@ window.FILMS_FEED = {
     }
   ]
 };
+
+// Kino teatrų / savivaldybių logotipai (assets/img/); dark: true — baltas logo ant tamsios plytelės
+window.VENUE_LOGOS = {
+    'Multikino Vilnius': { src: 'partner-multikino.png' },
+    'Kino centras „Skalvija“': { src: 'partner-skalvija.png' },
+    'Kino teatras „Romuva“': { src: 'venue-romuva.png', dark: true },
+    'Klaipėdos kultūros fabrikas': { src: 'venue-fabrikas.jpg' },
+    'Kino centras „Garsas“': { src: 'venue-garsas.jpg' },
+    'Kino teatras „Spindulys“': { src: 'venue-spindulys.png' },
+    'Kino teatras „Dainava“': { src: 'venue-dainava.png' },
+    'Šalčininkų kultūros centras': { src: 'venue-salcininkai.png' },
+    'Mažeikių kultūros centras': { src: 'venue-mkc.png' }
+};

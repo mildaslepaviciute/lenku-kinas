@@ -102,23 +102,40 @@
         '</div>' +
         '</section>';
 
-    // --- Artimiausi seansai ---
+    // --- Artimiausi seansai — tokia pati kortelė kaip tvarkaraštyje ---
 
-    const rows = film.screenings.map((s) =>
-        '<div class="screening">' +
-        '<span class="screening-date">' + fmtDate(s.date) + '</span>' +
-        '<span class="screening-time">' + esc(s.time) + '</span>' +
-        '<span class="screening-place"><strong>' + esc(s.city) + '</strong>' + esc(s.venue) + '</span>' +
-        '<a class="btn btn-solid btn-small" href="' + esc(s.ticketUrl) + '">Į bilietų pirkimą</a>' +
-        '</div>'
-    ).join('');
+    const VENUE_LOGOS = window.VENUE_LOGOS || {};
+
+    function venueSlot(venue) {
+        const logo = VENUE_LOGOS[venue];
+        if (!logo) return '<span class="venue-logo-slot"></span>';
+        return '<span class="venue-logo-slot' + (logo.dark ? ' venue-logo-slot--dark' : '') + '">' +
+            '<img class="venue-logo" src="assets/img/' + logo.src + '" alt="' + esc(venue) + '" loading="lazy">' +
+            '</span>';
+    }
+
+    const rows = film.screenings.map((s) => {
+        const cta = s.free
+            ? '<span class="free-label">Įėjimas nemokamas</span>'
+            : '<a class="btn btn-solid btn-small" href="' + esc(s.ticketUrl) + '">Pirkti bilietą</a>';
+        return '<div class="screening screening--schedule">' +
+            '<span class="screening-time">' + esc(s.time) + '</span>' +
+            '<span class="screening-film">' +
+            '<span class="screening-date">' + fmtDate(s.date) + '</span>' +
+            (s.note ? '<em class="screening-note">' + esc(s.note) + '</em>' : '') +
+            '</span>' +
+            '<span class="screening-place">' + venueSlot(s.venue) +
+            '<span class="screening-place-text"><strong>' + esc(s.city) + '</strong>' + esc(s.venue) + '</span>' +
+            '</span>' +
+            cta +
+            '</div>';
+    }).join('');
 
     const screeningsHtml =
         '<section class="section section-alt" id="seansai">' +
         '<div class="wrap">' +
         '<div class="section-head"><h2>Artimiausi seansai</h2></div>' +
         '<div class="screenings">' + rows + '</div>' +
-        '<p class="schedule-note">Įėjimas į visus seansus — nemokamas, tačiau būtina registracija.</p>' +
         '</div>' +
         '</section>';
 

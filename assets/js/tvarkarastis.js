@@ -11,18 +11,8 @@
 
     const CITIES = ['Vilnius', 'Kaunas', 'Klaipėda', 'Panevėžys', 'Marijampolė', 'Alytus', 'Šalčininkai', 'Mažeikiai'];
 
-    // Kino teatrų / savivaldybių logotipai (assets/img/); dark: true — baltas logo ant tamsios plytelės
-    const VENUE_LOGOS = {
-        'Multikino Vilnius': { src: 'partner-multikino.png' },
-        'Kino centras „Skalvija“': { src: 'partner-skalvija.png' },
-        'Kino teatras „Romuva“': { src: 'venue-romuva.png', dark: true },
-        'Klaipėdos kultūros fabrikas': { src: 'venue-fabrikas.jpg' },
-        'Kino centras „Garsas“': { src: 'venue-garsas.jpg' },
-        'Kino teatras „Spindulys“': { src: 'venue-spindulys.png' },
-        'Kino teatras „Dainava“': { src: 'venue-dainava.png' },
-        'Šalčininkų kultūros centras': { src: 'venue-salcininkai.png' },
-        'Mažeikių kultūros centras': { src: 'venue-mkc.png' }
-    };
+    // Kino teatrų logotipų žemėlapis — bendras, iš assets/data/films.js
+    const VENUE_LOGOS = window.VENUE_LOGOS || {};
 
     // Suplokštinam: kiekvienas seansas + filmo nuoroda
     const screenings = [];
@@ -60,22 +50,17 @@
 
     // --- Filtrai ---
 
-    function pill(label, count, active, onClick) {
-        const btn = document.createElement('button');
-        btn.className = 'pill' + (active ? ' is-active' : '');
-        btn.innerHTML = label + (count != null ? ' <span class="pill-count">' + count + '</span>' : '');
-        btn.addEventListener('click', onClick);
-        return btn;
-    }
-
     function countFor(city) {
         return screenings.filter((i) =>
             (city === 'visi' || i.s.city === city) && (!state.date || i.s.date === state.date)
         ).length;
     }
 
-    function renderFilters() {
-        cityFilterEl.innerHTML = '';
+    // Burbuliukai sukuriami vieną kartą — perpiešiant tik būsenas, juosta
+    // nepraranda horizontalios slinkties pozicijos (mobile swipe)
+    const cityPills = {};
+
+    function buildFilters() {
         const cityLabel = document.createElement('span');
         cityLabel.className = 'subfilter-label';
         cityLabel.textContent = 'Miestas:';
@@ -83,15 +68,24 @@
         const group = document.createElement('div');
         group.className = 'pill-group';
         cityFilterEl.appendChild(group);
-        group.appendChild(pill('Visi', countFor('visi'), state.city === 'visi', () => {
-            state.city = 'visi';
-            update();
-        }));
-        CITIES.forEach((c) => {
-            group.appendChild(pill(c, countFor(c), state.city === c, () => {
-                state.city = c;
+        ['visi'].concat(CITIES).forEach((key) => {
+            const btn = document.createElement('button');
+            btn.className = 'pill';
+            btn.innerHTML = esc(key === 'visi' ? 'Visi' : key) + ' <span class="pill-count"></span>';
+            btn.addEventListener('click', () => {
+                state.city = key;
                 update();
-            }));
+            });
+            group.appendChild(btn);
+            cityPills[key] = btn;
+        });
+    }
+
+    function renderFilters() {
+        Object.keys(cityPills).forEach((key) => {
+            const btn = cityPills[key];
+            btn.classList.toggle('is-active', state.city === key);
+            btn.querySelector('.pill-count').textContent = countFor(key);
         });
         dateClear.hidden = !state.date;
     }
@@ -289,5 +283,6 @@
         update();
     });
 
+    buildFilters();
     update();
 })();
