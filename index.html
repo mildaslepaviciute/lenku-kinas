@@ -8,43 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=5">
+<link rel="stylesheet" href="assets/css/style.css?v=10">
 </head>
-<body class="partneriai-v1 skaiciai-v2 fonas-v1">
-
-<!-- V3: partnerių juosta virš navbaro (ne sticky) -->
-<div class="marquee marquee-top" aria-label="Partneriai ir rėmėjai">
-    <div class="marquee-track">
-        <div class="marquee-group">
-            <a href="https://www.orlenlietuva.lt" target="_blank" rel="noopener"><img src="assets/img/partner-orlen-lietuva.png" alt="Orlen Lietuva"></a>
-            <a href="https://www.orlen.lt" target="_blank" rel="noopener"><img src="assets/img/partner-orlen-baltic.jpg" alt="Orlen Baltic Retail"></a>
-            <a href="https://www.polskidom.lt" target="_blank" rel="noopener"><img src="assets/img/partner-dkp.png" alt="Dom Kultury Polskiej w Wilnie"></a>
-            <a href="https://multikino.lt" target="_blank" rel="noopener"><img src="assets/img/partner-multikino.png" alt="Multikino"></a>
-            <a href="https://skalvija.lt" target="_blank" rel="noopener"><img src="assets/img/partner-skalvija.png" alt="Kino centras Skalvija"></a>
-            <a class="marquee-chip" href="https://salcininkaikultura.lt" target="_blank" rel="noopener"><img src="assets/img/partner-kc.png" alt="Šalčininkų rajono savivaldybės kultūros centras"></a>
-            <a href="https://www.mazeikiai.lt" target="_blank" rel="noopener"><img src="assets/img/partner-mazeikiai.jpg" alt="Mažeikių rajono savivaldybė"></a>
-            <a href="https://www.15min.lt" target="_blank" rel="noopener"><img src="assets/img/partner-15min.png" alt="15min"></a>
-            <a href="https://wilno.tvp.pl" target="_blank" rel="noopener"><img src="assets/img/partner-tvp.jpg" alt="TVP Wilno"></a>
-            <a href="https://zw.lt" target="_blank" rel="noopener"><img src="assets/img/partner-zw.png" alt="zw.lt"></a>
-            <a href="https://www.wilnoteka.lt" target="_blank" rel="noopener"><img src="assets/img/partner-wilnoteka.jpg" alt="Wilnoteka"></a>
-            <a href="https://kurierwilenski.lt" target="_blank" rel="noopener"><img src="assets/img/partner-kw.png" alt="Kurier Wileński"></a>
-        </div>
-        <div class="marquee-group" aria-hidden="true">
-            <a href="https://www.orlenlietuva.lt" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/partner-orlen-lietuva.png" alt=""></a>
-            <a href="https://www.orlen.lt" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/partner-orlen-baltic.jpg" alt=""></a>
-            <a href="https://www.polskidom.lt" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/partner-dkp.png" alt=""></a>
-            <a href="https://multikino.lt" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/partner-multikino.png" alt=""></a>
-            <a href="https://skalvija.lt" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/partner-skalvija.png" alt=""></a>
-            <a class="marquee-chip" href="https://salcininkaikultura.lt" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/partner-kc.png" alt=""></a>
-            <a href="https://www.mazeikiai.lt" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/partner-mazeikiai.jpg" alt=""></a>
-            <a href="https://www.15min.lt" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/partner-15min.png" alt=""></a>
-            <a href="https://wilno.tvp.pl" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/partner-tvp.jpg" alt=""></a>
-            <a href="https://zw.lt" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/partner-zw.png" alt=""></a>
-            <a href="https://www.wilnoteka.lt" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/partner-wilnoteka.jpg" alt=""></a>
-            <a href="https://kurierwilenski.lt" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/partner-kw.png" alt=""></a>
-        </div>
-    </div>
-</div>
+<body>
 
 <header class="site-header" id="top">
     <div class="wrap header-inner">
@@ -102,7 +68,7 @@
         </div>
     </section>
 
-    <!-- V1: partnerių bėganti juosta po skaičių -->
+    <!-- Partnerių bėganti juosta po skaičių -->
     <div class="marquee marquee-mid" aria-label="Partneriai ir rėmėjai">
         <div class="marquee-track">
             <div class="marquee-group">
@@ -141,13 +107,22 @@
         <div class="wrap">
             <div class="section-head">
                 <h2>Festivalio filmai</h2>
-                <a class="btn btn-ghost" href="repertuaras.html">Visi filmai</a>
+                <div class="slider-nav">
+                    <button type="button" class="slider-arrow" id="films-prev" aria-label="Ankstesni filmai" aria-controls="films-slider" disabled>
+                        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3 5 8l5 5"/></svg>
+                    </button>
+                    <button type="button" class="slider-arrow" id="films-next" aria-label="Kiti filmai" aria-controls="films-slider">
+                        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 3 5 5-5 5"/></svg>
+                    </button>
+                    <a class="btn btn-ghost" href="repertuaras.html">Visi filmai</a>
+                </div>
             </div>
 
-            <div class="movies">
+            <div class="movies movies-slider" id="films-slider">
                 <a class="movie" href="filmas.html?id=czerwone-maki">
                     <figure class="movie-media">
                         <img src="assets/img/film-czerwone-maki.jpg" alt="Kadras iš filmo „Raudonos aguonos“" loading="lazy" width="400" height="400">
+                        <span class="movie-badges"><span class="badge">Premjera</span></span>
                         <figcaption class="movie-tag">Karo drama</figcaption>
                     </figure>
                     <div class="movie-body">
@@ -165,6 +140,90 @@
                     <div class="movie-body">
                         <h3>Kaimiečiai <span>(Chłopi)</span></h3>
                         <p class="movie-meta">2023 · Lenkija, Lietuva, Serbija · 110 min.</p>
+                        <span class="movie-more">Plačiau</span>
+                    </div>
+                </a>
+
+                <a class="movie" href="filmas.html?id=wielka-podroz">
+                    <figure class="movie-media movie-media--ph tone-2">
+                        <span class="ph-title">Wielka podróż</span>
+                        <span class="ph-year">2026</span>
+                        <span class="movie-badges"><span class="badge">Atidarymo filmas</span></span>
+                        <figcaption class="movie-tag">Drama</figcaption>
+                    </figure>
+                    <div class="movie-body">
+                        <h3>Didžioji kelionė <span>(Wielka podróż)</span></h3>
+                        <p class="movie-meta">2026 · 102 min. · rež. Andrzej Barański</p>
+                        <span class="movie-more">Plačiau</span>
+                    </div>
+                </a>
+
+                <a class="movie" href="filmas.html?id=pokoj-ciszy">
+                    <figure class="movie-media movie-media--ph tone-1">
+                        <span class="ph-title">Pokój ciszy</span>
+                        <span class="ph-year">2025</span>
+                        <span class="movie-badges"><span class="badge">Premjera</span></span>
+                        <figcaption class="movie-tag">Drama</figcaption>
+                    </figure>
+                    <div class="movie-body">
+                        <h3>Tylos kambarys <span>(Pokój ciszy)</span></h3>
+                        <p class="movie-meta">2025 · 104 min. · rež. Paweł Domagała</p>
+                        <span class="movie-more">Plačiau</span>
+                    </div>
+                </a>
+
+                <a class="movie" href="filmas.html?id=szklane-domy">
+                    <figure class="movie-media movie-media--ph tone-3">
+                        <span class="ph-title">Szklane domy</span>
+                        <span class="ph-year">2024</span>
+                        <span class="movie-badges"><span class="badge">Susitikimas su kūrėjais</span></span>
+                        <figcaption class="movie-tag">Psichologinė drama</figcaption>
+                    </figure>
+                    <div class="movie-body">
+                        <h3>Stiklo namai <span>(Szklane domy)</span></h3>
+                        <p class="movie-meta">2024 · 121 min. · rež. Piotr Adamczyk</p>
+                        <span class="movie-more">Plačiau</span>
+                    </div>
+                </a>
+
+                <a class="movie" href="filmas.html?id=ostatni-kadr">
+                    <figure class="movie-media movie-media--ph tone-4">
+                        <span class="ph-title">Ostatni kadr</span>
+                        <span class="ph-year">2025</span>
+                        <span class="movie-badges"><span class="badge">Uždarymo filmas</span></span>
+                        <figcaption class="movie-tag">Dokumentinis</figcaption>
+                    </figure>
+                    <div class="movie-body">
+                        <h3>Paskutinis kadras <span>(Ostatni kadr)</span></h3>
+                        <p class="movie-meta">2025 · 95 min. · rež. Maria Zmarz-Koczanowicz</p>
+                        <span class="movie-more">Plačiau</span>
+                    </div>
+                </a>
+
+                <a class="movie" href="filmas.html?id=listy-matki">
+                    <figure class="movie-media movie-media--ph tone-5">
+                        <span class="ph-title">Listy matki</span>
+                        <span class="ph-year">2025</span>
+                        <span class="movie-badges"><span class="badge">Premjera</span></span>
+                        <figcaption class="movie-tag">Biografinė drama</figcaption>
+                    </figure>
+                    <div class="movie-body">
+                        <h3>Motinos laiškai <span>(Listy matki)</span></h3>
+                        <p class="movie-meta">2025 · 116 min. · rež. Joanna Kos-Krauze</p>
+                        <span class="movie-more">Plačiau</span>
+                    </div>
+                </a>
+
+                <a class="movie" href="filmas.html?id=smoczek-franciszek">
+                    <figure class="movie-media movie-media--ph tone-2">
+                        <span class="ph-title">Smoczek Franciszek</span>
+                        <span class="ph-year">2025</span>
+                        <span class="movie-badges"><span class="badge">Dubliuota lietuviškai</span></span>
+                        <figcaption class="movie-tag">Animacinis</figcaption>
+                    </figure>
+                    <div class="movie-body">
+                        <h3>Drakoniukas Františekas <span>(Smoczek Franciszek)</span></h3>
+                        <p class="movie-meta">2025 · 78 min. · rež. Zofia Dąbrowska</p>
                         <span class="movie-more">Plačiau</span>
                     </div>
                 </a>
@@ -195,7 +254,7 @@
         </div>
     </section>
 
-    <!-- V2: partnerių blokas prieš footer -->
+    <!-- PARTNERIAI -->
     <section class="section section-alt" id="partneriai">
         <div class="wrap">
             <div class="section-head">
@@ -220,27 +279,6 @@
 
 </main>
 
-<!-- Versijų perjungiklis -->
-<div class="switcher">
-    <div class="switcher-row" role="group" aria-label="Partnerių pateikimo variantas">
-        <span class="switcher-label">Partneriai</span>
-        <button type="button" data-group="partneriai" data-variant="v1" class="is-active">v1</button>
-        <button type="button" data-group="partneriai" data-variant="v2">v2</button>
-        <button type="button" data-group="partneriai" data-variant="v3">v3</button>
-    </div>
-    <div class="switcher-row" role="group" aria-label="Skaičių pateikimo variantas">
-        <span class="switcher-label">Skaičiai</span>
-        <button type="button" data-group="skaiciai" data-variant="v1">v1</button>
-        <button type="button" data-group="skaiciai" data-variant="v2" class="is-active">v2</button>
-    </div>
-    <div class="switcher-row" role="group" aria-label="Šviesaus fono atspalvis">
-        <span class="switcher-label">Fonas</span>
-        <button type="button" data-group="fonas" data-variant="v1" class="is-active" title="Rausvas popierius (#f9f4f4)">v1</button>
-        <button type="button" data-group="fonas" data-variant="v2" title="Neutrali pilka (#f5f5f5)">v2</button>
-        <button type="button" data-group="fonas" data-variant="v3" title="Greige (#f5f4f2)">v3</button>
-    </div>
-</div>
-
 <footer class="site-footer">
     <div class="wrap footer-inner">
         <a href="index.html" class="footer-logo" aria-label="Lenkų kinas — pradžia">
@@ -260,6 +298,6 @@
     </div>
 </footer>
 
-<script src="assets/js/main.js?v=5"></script>
+<script src="assets/js/main.js?v=9"></script>
 </body>
 </html>

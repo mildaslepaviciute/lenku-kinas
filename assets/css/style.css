@@ -12,8 +12,8 @@
     --ink: #211316;
     --ink-soft: #6f5f5d;
     --paper: #fff;
-    --cream: #f9f4f4;
-    --line: #eadedf;
+    --cream: #f5f5f5;
+    --line: #e6e4e4;
     --display: "Anton", "Arial Narrow", sans-serif;
     --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
     --wrap: 1200px;
@@ -179,15 +179,6 @@ img { max-width: 100%; height: auto; display: block; }
 
 .marquee-chip img { filter: none; opacity: .9; height: 28px; }
 
-.marquee-top {
-    background: var(--cream);
-    padding: 12px 0;
-}
-
-.marquee-top .marquee-group img { height: 28px; }
-.marquee-top .marquee-chip { padding: 5px 12px; }
-.marquee-top .marquee-chip img { height: 22px; }
-
 @keyframes marquee {
     to { transform: translateX(-50%); }
 }
@@ -307,47 +298,20 @@ img { max-width: 100%; height: auto; display: block; }
     text-transform: uppercase;
 }
 
-/* v1 — kortelės */
-body.skaiciai-v1 .facts { padding: 0 0 88px; }
-
-body.skaiciai-v1 .facts-grid { gap: 20px; }
-
-body.skaiciai-v1 .fact {
-    padding: 32px 24px 28px;
-    background: var(--cream);
-    border-top: 4px solid;
-    border-image: var(--grad) 1;
-    text-align: center;
-}
-
-body.skaiciai-v1 .fact strong {
-    font-size: 48px;
-    background: var(--grad);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-body.skaiciai-v1 .fact span {
-    margin-top: 10px;
-    color: var(--ink-soft);
-}
-
-/* v2 — gradiento juosta */
-body.skaiciai-v2 .facts {
+.facts {
     background: var(--grad-soft);
     color: #fff;
     padding: 44px 0;
 }
 
-body.skaiciai-v2 .facts-grid {
+.facts-grid {
     gap: 24px;
     text-align: center;
 }
 
-body.skaiciai-v2 .fact strong { font-size: 44px; }
+.fact strong { font-size: 44px; }
 
-body.skaiciai-v2 .fact span {
+.fact span {
     margin-top: 6px;
     opacity: .85;
 }
@@ -400,6 +364,59 @@ body.skaiciai-v2 .fact span {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 36px 28px;
+}
+
+/* Filmų slideris — slankioja į šoną, full bleed dešinėje (pradžia + filmo psl.) */
+#filmai,
+#kiti-filmai { overflow-x: clip; }
+
+.slider-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.slider-nav .btn { margin-left: 8px; }
+
+.slider-arrow {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: var(--ink);
+    border: 1.5px solid var(--line);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: border-color .15s, color .15s, opacity .15s;
+}
+
+.slider-arrow:hover:not(:disabled) { border-color: var(--main); color: var(--main); }
+
+.slider-arrow:disabled { opacity: .35; cursor: default; }
+
+.movies-slider {
+    display: flex;
+    gap: 28px;
+    overflow-x: auto;
+    margin-right: calc(50% - 50vw);
+    padding-right: 24px;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.movies-slider::-webkit-scrollbar { display: none; }
+
+.movies-slider .movie {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+}
+
+@media (max-width: 760px) {
+    .movies-slider { gap: 20px; }
+    .movies-slider .movie { flex-basis: 240px; }
 }
 
 .movie {
@@ -561,9 +578,6 @@ body.skaiciai-v2 .fact span {
 .subfilter .pill { padding: 7px 14px; font-size: 12px; }
 
 .repertoire { padding-top: 48px; }
-
-/* Tvarkaraščio sąrašo fonas — neutrali pilka (fonas v2), ne kreminis --cream */
-.repertoire.section-alt { background: #f5f5f5; }
 
 .group-head { margin: 56px 0 28px; max-width: 720px; }
 .group-head:first-child { margin-top: 0; }
@@ -1395,76 +1409,6 @@ body.skaiciai-v2 .fact span {
 .partner-dark { background: var(--ink); }
 .partner-dark img { opacity: .85; filter: none; }
 .partner-dark:hover img { opacity: 1; }
-
-/* --------------------------------------------------------------------------
-   Variantai + perjungiklis
-   -------------------------------------------------------------------------- */
-
-/* v1: juosta po skaičių · v2: blokas prieš footer · v3: juosta virš navbaro */
-body.partneriai-v1 .marquee-top,
-body.partneriai-v1 #partneriai { display: none; }
-body.partneriai-v2 .marquee { display: none; }
-body.partneriai-v3 .marquee-mid,
-body.partneriai-v3 #partneriai { display: none; }
-
-/* fonas — šviesaus fono atspalvio variantai:
-   v1: rausvas popierius (numatytasis iš :root) · v2: neutrali pilka · v3: greige */
-body.fonas-v2 { --cream: #f5f5f5; --line: #e6e4e4; }
-body.fonas-v3 { --cream: #f5f4f2; --line: #e7e3df; }
-
-.switcher {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 12px 14px;
-    background: #fff;
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    box-shadow: 0 6px 24px rgba(33, 19, 22, .14);
-}
-
-.switcher-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6px;
-}
-
-.switcher-label {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    margin-right: 10px;
-}
-
-.switcher button {
-    padding: 6px 14px;
-    font-family: var(--body);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-    color: var(--ink);
-    background: none;
-    border: 1.5px solid var(--line);
-    border-radius: 999px;
-    cursor: pointer;
-    transition: background .15s, color .15s, border-color .15s;
-}
-
-.switcher button:hover { border-color: var(--main); color: var(--main); }
-
-.switcher button.is-active {
-    background: var(--main);
-    border-color: var(--main);
-    color: #fff;
-}
 
 /* --------------------------------------------------------------------------
    Footer

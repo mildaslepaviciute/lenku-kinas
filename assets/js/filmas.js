@@ -139,5 +139,56 @@
         '</div>' +
         '</section>';
 
-    root.innerHTML = heroHtml + infoHtml + screeningsHtml;
+    // --- Kiti filmai — slideris kaip pradžios puslapyje ---
+
+    const others = feed.films.filter((f) => f.id !== film.id);
+    // pirmiausia tos pačios programos filmai
+    others.sort((a, b) =>
+        (a.program === film.program ? 0 : 1) - (b.program === film.program ? 0 : 1)
+    );
+    const picks = others.slice(0, 8);
+
+    let toneSeq = 0;
+    function movieCard(f) {
+        const ph = !f.image;
+        const media = ph
+            ? '<span class="ph-title">' + esc(f.originalTitle) + '</span><span class="ph-year">' + f.year + '</span>'
+            : '<img src="' + esc(f.image) + '" alt="Kadras iš filmo „' + esc(f.title) + '“" loading="lazy">';
+        const cardBadges = f.badges.length
+            ? '<span class="movie-badges">' + f.badges.map((b) => '<span class="badge">' + esc(b) + '</span>').join('') + '</span>'
+            : '';
+        return '<a class="movie" href="filmas.html?id=' + esc(f.id) + '">' +
+            '<figure class="movie-media' + (ph ? ' movie-media--ph tone-' + (toneSeq++ % 5 + 1) : '') + '">' +
+            media + cardBadges +
+            '<figcaption class="movie-tag">' + esc(f.genre) + '</figcaption>' +
+            '</figure>' +
+            '<div class="movie-body">' +
+            '<h3>' + esc(f.title) + ' <span>(' + esc(f.originalTitle) + ')</span></h3>' +
+            '<p class="movie-meta">' + f.year + ' · ' + f.duration + ' min. · rež. ' + esc(f.director) + '</p>' +
+            '<span class="movie-more">Plačiau</span>' +
+            '</div></a>';
+    }
+
+    const arrowSvg = (d) =>
+        '<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" ' +
+        'stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="' + d + '"/></svg>';
+
+    const othersHtml =
+        '<section class="section" id="kiti-filmai">' +
+        '<div class="wrap">' +
+        '<div class="section-head">' +
+        '<h2>Kiti filmai</h2>' +
+        '<div class="slider-nav">' +
+        '<button type="button" class="slider-arrow" id="films-prev" aria-label="Ankstesni filmai" aria-controls="films-slider" disabled>' + arrowSvg('M10 3 5 8l5 5') + '</button>' +
+        '<button type="button" class="slider-arrow" id="films-next" aria-label="Kiti filmai" aria-controls="films-slider">' + arrowSvg('m6 3 5 5-5 5') + '</button>' +
+        '<a class="btn btn-ghost" href="repertuaras.html">Visi filmai</a>' +
+        '</div>' +
+        '</div>' +
+        '<div class="movies movies-slider" id="films-slider">' + picks.map(movieCard).join('') + '</div>' +
+        '</div>' +
+        '</section>';
+
+    root.innerHTML = heroHtml + infoHtml + screeningsHtml + othersHtml;
+
+    if (window.initSlider) window.initSlider();
 })();

@@ -17,33 +17,29 @@ nav.addEventListener('click', (e) => {
     }
 });
 
-// Versijų perjungiklis
-// partneriai: v1 — juosta po skaičių, v2 — blokas prieš footer, v3 — juosta virš navbaro
-// skaiciai:   v1 — kortelės, v2 — gradiento juosta
-// fonas:      v1 — rausvas popierius, v2 — neutrali pilka, v3 — greige
-const switcherBtns = document.querySelectorAll('.switcher button');
-const VARIANTS = ['v1', 'v2', 'v3', 'v4'];
+// Filmų slideris — strėlytės (naudoja ir pradžios, ir filmo puslapis)
+window.initSlider = function () {
+    const slider = document.getElementById('films-slider');
+    const prev = document.getElementById('films-prev');
+    const next = document.getElementById('films-next');
+    if (!slider || !prev || !next) return;
 
-function setVariant(group, variant) {
-    VARIANTS.forEach((v) => document.body.classList.remove(group + '-' + v));
-    document.body.classList.add(group + '-' + variant);
-    switcherBtns.forEach((b) => {
-        if (b.dataset.group === group) b.classList.toggle('is-active', b.dataset.variant === variant);
-    });
-    try { localStorage.setItem('variant-' + group, variant); } catch (e) {}
-}
+    const step = () => {
+        const card = slider.querySelector('.movie');
+        const gap = parseFloat(getComputedStyle(slider).gap) || 28;
+        return card ? card.getBoundingClientRect().width + gap : 320;
+    };
 
-switcherBtns.forEach((btn) => {
-    btn.addEventListener('click', () => setVariant(btn.dataset.group, btn.dataset.variant));
-});
+    prev.addEventListener('click', () => slider.scrollBy({ left: -step(), behavior: 'smooth' }));
+    next.addEventListener('click', () => slider.scrollBy({ left: step(), behavior: 'smooth' }));
 
-try { localStorage.removeItem('variant-sriftas'); } catch (e) {}
+    const syncArrows = () => {
+        prev.disabled = slider.scrollLeft <= 2;
+        next.disabled = slider.scrollLeft >= slider.scrollWidth - slider.clientWidth - 2;
+    };
+    slider.addEventListener('scroll', syncArrows, { passive: true });
+    window.addEventListener('resize', syncArrows);
+    syncArrows();
+};
 
-['partneriai', 'skaiciai', 'fonas'].forEach((group) => {
-    try {
-        const saved = localStorage.getItem('variant-' + group);
-        if (VARIANTS.includes(saved) && document.querySelector('.switcher button[data-group="' + group + '"][data-variant="' + saved + '"]')) {
-            setVariant(group, saved);
-        }
-    } catch (e) {}
-});
+window.initSlider();
