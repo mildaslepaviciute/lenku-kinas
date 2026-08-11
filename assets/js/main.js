@@ -20,8 +20,9 @@ nav.addEventListener('click', (e) => {
 // Versijų perjungiklis
 // partneriai: v1 — juosta po skaičių, v2 — blokas prieš footer, v3 — juosta virš navbaro
 // skaiciai:   v1 — kortelės, v2 — gradiento juosta
+// fonas:      v1 — rausvas popierius, v2 — neutrali pilka, v3 — greige
 const switcherBtns = document.querySelectorAll('.switcher button');
-const VARIANTS = ['v1', 'v2', 'v3'];
+const VARIANTS = ['v1', 'v2', 'v3', 'v4'];
 
 function setVariant(group, variant) {
     VARIANTS.forEach((v) => document.body.classList.remove(group + '-' + v));
@@ -36,7 +37,9 @@ switcherBtns.forEach((btn) => {
     btn.addEventListener('click', () => setVariant(btn.dataset.group, btn.dataset.variant));
 });
 
-['partneriai', 'skaiciai'].forEach((group) => {
+try { localStorage.removeItem('variant-sriftas'); } catch (e) {}
+
+['partneriai', 'skaiciai', 'fonas'].forEach((group) => {
     try {
         const saved = localStorage.getItem('variant-' + group);
         if (VARIANTS.includes(saved) && document.querySelector('.switcher button[data-group="' + group + '"][data-variant="' + saved + '"]')) {

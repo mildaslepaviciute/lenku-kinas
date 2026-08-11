@@ -69,7 +69,7 @@ window.FILMS_FEED = {
       ],
       "url": "filmas.html?id=czerwone-maki",
       "description": "„Raudonos aguonos“ (2024) — karo drama apie šeimą, kurią netikėtai pasiveja ilgai slėpta praeitis. Kritikų vadinamas vienu ryškiausių pastarojo meto lenkų kino balsų.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Krzysztof Łukaszewicz",
         "screenwriter": "Zofia Malinowska",
@@ -124,7 +124,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=chlopi",
       "description": "„Kaimiečiai“ (2023) — animacinis apie mažo miestelio bendruomenę, priverstą rinktis tarp tiesos ir ramybės. Subtilus pasakojimas, balansuojantis tarp dramos ir šviesios ironijos.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "DK Welchman, Hugh Welchman",
         "screenwriter": "Krzysztof Bednarek",
@@ -187,7 +187,7 @@ window.FILMS_FEED = {
       ],
       "url": "filmas.html?id=pokoj-ciszy",
       "description": "„Tylos kambarys“ (2025) — drama apie dviejų kartų susidūrimą viename name. Vizualiai įtaigus kūrinys, kuriame svarbiausia — tai, kas lieka neišsakyta.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Paweł Domagała",
         "screenwriter": "Julia Wiśniewska",
@@ -257,7 +257,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=wiatr-polnocy",
       "description": "„Šiaurės vėjas“ (2025) — trileris apie moterį, po dvidešimties metų grįžtančią į gimtąjį miestą. Tikslus laikmečio portretas, kuriame kiekviena detalė turi reikšmę.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Magdalena Czerwińska",
         "screenwriter": "Adam Pawlak",
@@ -309,7 +309,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=ostatni-tramwaj",
       "description": "„Paskutinis tramvajus“ (2024) — drama apie draugystę, kuri išbandoma vieną lemtingą naktį. Filmas, po kurio seanso norisi dar ilgai tylėti.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Jakub Michalski",
         "screenwriter": "Beata Sikora",
@@ -372,7 +372,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=lato-na-mazurach",
       "description": "„Vasara Mozūrijoje“ (2025) — romantinė komedija apie žmogų, bandantį pradėti gyvenimą iš naujo svetimame mieste. Aktorių ansamblio darbas čia vertas atskiro paminėjimo.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Anna Kowalczyk",
         "screenwriter": "Mateusz Król",
@@ -444,7 +444,7 @@ window.FILMS_FEED = {
       ],
       "url": "filmas.html?id=szklane-domy",
       "description": "„Stiklo namai“ (2024) — psichologinė drama apie meilę, gimusią pačiu netinkamiausiu metu. Kritikų vadinamas vienu ryškiausių pastarojo meto lenkų kino balsų.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Piotr Adamczyk",
         "screenwriter": "Hanna Ostrowska",
@@ -496,7 +496,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=czarny-ogrod",
       "description": "„Juodasis sodas“ (2025) — mistinė drama apie paslaptį, kurią saugo trys šeimos kartos. Subtilus pasakojimas, balansuojantis tarp dramos ir šviesios ironijos.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Karolina Nowak",
         "screenwriter": "Rafał Czajka",
@@ -557,7 +557,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=dziewiate-pietro",
       "description": "„Devintas aukštas“ (2024) — trileris apie jauno žmogaus kelią tarp svajonių ir pareigos. Vizualiai įtaigus kūrinys, kuriame svarbiausia — tai, kas lieka neišsakyta.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Marcin Wrona",
         "screenwriter": "Dorota Zawadzka",
@@ -632,7 +632,7 @@ window.FILMS_FEED = {
       ],
       "url": "filmas.html?id=listy-matki",
       "description": "„Motinos laiškai“ (2025) — biografinė drama apie bendruomenę, kurią suvienija netikėta netektis. Tikslus laikmečio portretas, kuriame kiekviena detalė turi reikšmę.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Joanna Kos-Krauze",
         "screenwriter": "Szymon Lis",
@@ -684,7 +684,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=srebrna-rzeka",
       "description": "„Sidabrinė upė“ (2024) — drama apie tylų maištą prieš nusistovėjusią tvarką. Filmas, po kurio seanso norisi dar ilgai tylėti.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Łukasz Palkowski",
         "screenwriter": "Zofia Malinowska",
@@ -745,7 +745,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=nocna-zmiana",
       "description": "„Naktinė pamaina“ (2025) — kriminalinė drama apie atmintį ir tai, ką pasirenkame pamiršti. Aktorių ansamblio darbas čia vertas atskiro paminėjimo.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Bartosz Konopka",
         "screenwriter": "Krzysztof Bednarek",
@@ -815,7 +815,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=wesele-na-slasku",
       "description": "„Vestuvės Silezijoje“ (2024) — komedija apie šeimą, kurią netikėtai pasiveja ilgai slėpta praeitis. Kritikų vadinamas vienu ryškiausių pastarojo meto lenkų kino balsų.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Wojciech Smarzowski",
         "screenwriter": "Julia Wiśniewska",
@@ -869,7 +869,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=pusty-peron",
       "description": "„Tuščias perronas“ (2025) — drama apie mažo miestelio bendruomenę, priverstą rinktis tarp tiesos ir ramybės. Subtilus pasakojimas, balansuojantis tarp dramos ir šviesios ironijos.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Aleksandra Terpińska",
         "screenwriter": "Adam Pawlak",
@@ -932,7 +932,7 @@ window.FILMS_FEED = {
       ],
       "url": "filmas.html?id=zimowe-swiatlo",
       "description": "„Žiemos šviesa“ (2024) — drama apie dviejų kartų susidūrimą viename name. Vizualiai įtaigus kūrinys, kuriame svarbiausia — tai, kas lieka neišsakyta.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Michał Rosa",
         "screenwriter": "Beata Sikora",
@@ -1002,7 +1002,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=droga-ptakow",
       "description": "„Paukščių takas“ (2025) — istorinė drama apie moterį, po dvidešimties metų grįžtančią į gimtąjį miestą. Tikslus laikmečio portretas, kuriame kiekviena detalė turi reikšmę.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Filip Bajon",
         "screenwriter": "Mateusz Król",
@@ -1054,7 +1054,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=kwiaty-z-betonu",
       "description": "„Betono gėlės“ (2024) — socialinė drama apie draugystę, kuri išbandoma vieną lemtingą naktį. Filmas, po kurio seanso norisi dar ilgai tylėti.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Kinga Dębska",
         "screenwriter": "Hanna Ostrowska",
@@ -1118,7 +1118,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=fala-radiowa",
       "description": "„Radijo banga“ (2025) — muzikinė drama apie žmogų, bandantį pradėti gyvenimą iš naujo svetimame mieste. Aktorių ansamblio darbas čia vertas atskiro paminėjimo.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Leszek Dawid",
         "screenwriter": "Rafał Czajka",
@@ -1188,7 +1188,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=obce-miasto",
       "description": "„Svetimas miestas“ (2024) — trileris apie meilę, gimusią pačiu netinkamiausiu metu. Kritikų vadinamas vienu ryškiausių pastarojo meto lenkų kino balsų.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Agnieszka Smoczyńska",
         "screenwriter": "Dorota Zawadzka",
@@ -1242,7 +1242,7 @@ window.FILMS_FEED = {
       ],
       "url": "filmas.html?id=papierowe-statki",
       "description": "„Popieriniai laivai“ (2025) — drama apie paslaptį, kurią saugo trys šeimos kartos. Subtilus pasakojimas, balansuojantis tarp dramos ir šviesios ironijos.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Tomasz Wasilewski",
         "screenwriter": "Szymon Lis",
@@ -1303,7 +1303,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=jesienna-sonata",
       "description": "„Rudens sonata“ (2024) — drama apie jauno žmogaus kelią tarp svajonių ir pareigos. Vizualiai įtaigus kūrinys, kuriame svarbiausia — tai, kas lieka neišsakyta.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Małgorzata Szumowska",
         "screenwriter": "Zofia Malinowska",
@@ -1375,7 +1375,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=linia-ognia",
       "description": "„Ugnies linija“ (2025) — karo drama apie bendruomenę, kurią suvienija netikėta netektis. Tikslus laikmečio portretas, kuriame kiekviena detalė turi reikšmę.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Jan Komasa",
         "screenwriter": "Krzysztof Bednarek",
@@ -1427,7 +1427,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=bialy-las",
       "description": "„Baltas miškas“ (2024) — mistinis trileris apie tylų maištą prieš nusistovėjusią tvarką. Filmas, po kurio seanso norisi dar ilgai tylėti.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Bodo Kox",
         "screenwriter": "Julia Wiśniewska",
@@ -1488,7 +1488,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=siedem-siostr",
       "description": "„Septynios seserys“ (2025) — šeimos drama apie atmintį ir tai, ką pasirenkame pamiršti. Aktorių ansamblio darbas čia vertas atskiro paminėjimo.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Urszula Antoniak",
         "screenwriter": "Adam Pawlak",
@@ -1558,7 +1558,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=ekspres-o-polnocy",
       "description": "„Vidurnakčio ekspresas“ (2024) — kriminalinis apie šeimą, kurią netikėtai pasiveja ilgai slėpta praeitis. Kritikų vadinamas vienu ryškiausių pastarojo meto lenkų kino balsų.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Maciej Pieprzyca",
         "screenwriter": "Beata Sikora",
@@ -1613,7 +1613,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=zakurzone-lustra",
       "description": "„Dulkėti veidrodžiai“ (2025) — psichologinė drama apie mažo miestelio bendruomenę, priverstą rinktis tarp tiesos ir ramybės. Subtilus pasakojimas, balansuojantis tarp dramos ir šviesios ironijos.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Grzegorz Zariczny",
         "screenwriter": "Mateusz Król",
@@ -1676,7 +1676,7 @@ window.FILMS_FEED = {
       ],
       "url": "filmas.html?id=smoczek-franciszek",
       "description": "„Drakoniukas Františekas“ (2025) — animacinis apie dviejų kartų susidūrimą viename name. Vizualiai įtaigus kūrinys, kuriame svarbiausia — tai, kas lieka neišsakyta. Filmas rodomas dubliuotas lietuviškai, rekomenduojamas visai šeimai.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Zofia Dąbrowska",
         "screenwriter": "Hanna Ostrowska",
@@ -1748,7 +1748,7 @@ window.FILMS_FEED = {
       ],
       "url": "filmas.html?id=szkola-w-kosmosie",
       "description": "„Kosmoso mokykla“ (2024) — nuotykių apie moterį, po dvidešimties metų grįžtančią į gimtąjį miestą. Tikslus laikmečio portretas, kuriame kiekviena detalė turi reikšmę. Filmas rodomas dubliuotas lietuviškai, rekomenduojamas visai šeimai.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Rafał Skalski",
         "screenwriter": "Rafał Czajka",
@@ -1802,7 +1802,7 @@ window.FILMS_FEED = {
       ],
       "url": "filmas.html?id=wilczy-bilet",
       "description": "„Vilko bilietas“ (2025) — šeimos nuotykių apie draugystę, kuri išbandoma vieną lemtingą naktį. Filmas, po kurio seanso norisi dar ilgai tylėti. Filmas rodomas dubliuotas lietuviškai, rekomenduojamas visai šeimai.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Katarzyna Rosłaniec",
         "screenwriter": "Dorota Zawadzka",
@@ -1865,7 +1865,7 @@ window.FILMS_FEED = {
       ],
       "url": "filmas.html?id=wielka-podroz",
       "description": "„Didžioji kelionė“ (2026) — drama apie žmogų, bandantį pradėti gyvenimą iš naujo svetimame mieste. Aktorių ansamblio darbas čia vertas atskiro paminėjimo.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Andrzej Barański",
         "screenwriter": "Szymon Lis",
@@ -1937,7 +1937,7 @@ window.FILMS_FEED = {
       ],
       "url": "filmas.html?id=ostatni-kadr",
       "description": "„Paskutinis kadras“ (2025) — dokumentinis apie meilę, gimusią pačiu netinkamiausiu metu. Kritikų vadinamas vienu ryškiausių pastarojo meto lenkų kino balsų.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Maria Zmarz-Koczanowicz",
         "screenwriter": "Zofia Malinowska",
@@ -1989,7 +1989,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=kamienne-niebo",
       "description": "„Akmeninis dangus“ (1971) — drama apie paslaptį, kurią saugo trys šeimos kartos. Subtilus pasakojimas, balansuojantis tarp dramos ir šviesios ironijos. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Marek Zieliński",
         "screenwriter": "Krzysztof Bednarek",
@@ -2047,7 +2047,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=dworzec",
       "description": "„Traukinių stotis“ (1974) — drama apie jauno žmogaus kelią tarp svajonių ir pareigos. Vizualiai įtaigus kūrinys, kuriame svarbiausia — tai, kas lieka neišsakyta. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Marek Zieliński",
         "screenwriter": "Julia Wiśniewska",
@@ -2114,7 +2114,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=dzieci-wrzesnia",
       "description": "„Rugsėjo vaikai“ (1978) — karo drama apie bendruomenę, kurią suvienija netikėta netektis. Tikslus laikmečio portretas, kuriame kiekviena detalė turi reikšmę. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Marek Zieliński",
         "screenwriter": "Adam Pawlak",
@@ -2163,7 +2163,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=cichy-brzeg",
       "description": "„Tylusis krantas“ (1983) — psichologinė drama apie tylų maištą prieš nusistovėjusią tvarką. Filmas, po kurio seanso norisi dar ilgai tylėti. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Marek Zieliński",
         "screenwriter": "Beata Sikora",
@@ -2221,7 +2221,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=miedziane-miasto",
       "description": "„Vario miestas“ (1989) — socialinė drama apie atmintį ir tai, ką pasirenkame pamiršti. Aktorių ansamblio darbas čia vertas atskiro paminėjimo. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Marek Zieliński",
         "screenwriter": "Mateusz Król",
@@ -2288,7 +2288,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=listy-z-krakowa",
       "description": "„Laiškai iš Krokuvos“ (1979) — drama apie šeimą, kurią netikėtai pasiveja ilgai slėpta praeitis. Kritikų vadinamas vienu ryškiausių pastarojo meto lenkų kino balsų. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Agnieszka Sobczak",
         "screenwriter": "Hanna Ostrowska",
@@ -2337,7 +2337,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=biala-sukienka",
       "description": "„Balta suknelė“ (1984) — melodrama apie mažo miestelio bendruomenę, priverstą rinktis tarp tiesos ir ramybės. Subtilus pasakojimas, balansuojantis tarp dramos ir šviesios ironijos. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Agnieszka Sobczak",
         "screenwriter": "Rafał Czajka",
@@ -2395,7 +2395,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=czwarty-pokoj",
       "description": "„Ketvirtas kambarys“ (1987) — psichologinė drama apie dviejų kartų susidūrimą viename name. Vizualiai įtaigus kūrinys, kuriame svarbiausia — tai, kas lieka neišsakyta. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Agnieszka Sobczak",
         "screenwriter": "Dorota Zawadzka",
@@ -2462,7 +2462,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=gra-cieni",
       "description": "„Šešėlių žaidimas“ (1991) — trileris apie moterį, po dvidešimties metų grįžtančią į gimtąjį miestą. Tikslus laikmečio portretas, kuriame kiekviena detalė turi reikšmę. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Agnieszka Sobczak",
         "screenwriter": "Szymon Lis",
@@ -2511,7 +2511,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=wieczorna-piesn",
       "description": "„Vakaro daina“ (1996) — drama apie draugystę, kuri išbandoma vieną lemtingą naktį. Filmas, po kurio seanso norisi dar ilgai tylėti. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Agnieszka Sobczak",
         "screenwriter": "Zofia Malinowska",
@@ -2569,7 +2569,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=kolejowy-romans",
       "description": "„Geležinkelio romansas“ (1968) — komedija apie žmogų, bandantį pradėti gyvenimą iš naujo svetimame mieste. Aktorių ansamblio darbas čia vertas atskiro paminėjimo. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Tomasz Grabowski",
         "screenwriter": "Krzysztof Bednarek",
@@ -2636,7 +2636,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=szary-wroclaw",
       "description": "„Pilkasis Vroclavas“ (1972) — drama apie meilę, gimusią pačiu netinkamiausiu metu. Kritikų vadinamas vienu ryškiausių pastarojo meto lenkų kino balsų. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Tomasz Grabowski",
         "screenwriter": "Julia Wiśniewska",
@@ -2685,7 +2685,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=sezon-polowan",
       "description": "„Medžioklės sezonas“ (1977) — politinė drama apie paslaptį, kurią saugo trys šeimos kartos. Subtilus pasakojimas, balansuojantis tarp dramos ir šviesios ironijos. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Tomasz Grabowski",
         "screenwriter": "Adam Pawlak",
@@ -2743,7 +2743,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=cisza-sniegu",
       "description": "„Sniego tyla“ (1982) — drama apie jauno žmogaus kelią tarp svajonių ir pareigos. Vizualiai įtaigus kūrinys, kuriame svarbiausia — tai, kas lieka neišsakyta. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Tomasz Grabowski",
         "screenwriter": "Beata Sikora",
@@ -2810,7 +2810,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=ostatnia-wieczerza",
       "description": "„Paskutinė vakarienė“ (1988) — drama apie bendruomenę, kurią suvienija netikėta netektis. Tikslus laikmečio portretas, kuriame kiekviena detalė turi reikšmę. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Tomasz Grabowski",
         "screenwriter": "Mateusz Król",
@@ -2859,7 +2859,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=oczy-morza",
       "description": "„Jūros akys“ (1975) — poetinė drama apie tylų maištą prieš nusistovėjusią tvarką. Filmas, po kurio seanso norisi dar ilgai tylėti. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Ewa Lipińska",
         "screenwriter": "Hanna Ostrowska",
@@ -2917,7 +2917,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=bursztynowy-szlak",
       "description": "„Gintaro kelias“ (1980) — nuotykių drama apie atmintį ir tai, ką pasirenkame pamiršti. Aktorių ansamblio darbas čia vertas atskiro paminėjimo. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Ewa Lipińska",
         "screenwriter": "Rafał Czajka",
@@ -2984,7 +2984,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=stroze-nocy",
       "description": "„Nakties sargai“ (1985) — kriminalinė drama apie šeimą, kurią netikėtai pasiveja ilgai slėpta praeitis. Kritikų vadinamas vienu ryškiausių pastarojo meto lenkų kino balsų. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Ewa Lipińska",
         "screenwriter": "Dorota Zawadzka",
@@ -3033,7 +3033,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=strona-lustra",
       "description": "„Veidrodžio pusė“ (1990) — psichologinė drama apie mažo miestelio bendruomenę, priverstą rinktis tarp tiesos ir ramybės. Subtilus pasakojimas, balansuojantis tarp dramos ir šviesios ironijos. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Ewa Lipińska",
         "screenwriter": "Szymon Lis",
@@ -3091,7 +3091,7 @@ window.FILMS_FEED = {
       "badges": [],
       "url": "filmas.html?id=targ-rozany",
       "description": "„Rožių turgus“ (1998) — tragikomedija apie dviejų kartų susidūrimą viename name. Vizualiai įtaigus kūrinys, kuriame svarbiausia — tai, kas lieka neišsakyta. Seansuose rodoma restauruota kopija — reta proga pamatyti kūrinį didžiajame ekrane.",
-      "trailer": null,
+      "trailer": "https://www.youtube.com/embed/ZpALdfikr5o",
       "crew": {
         "director": "Ewa Lipińska",
         "screenwriter": "Zofia Malinowska",
