@@ -562,6 +562,9 @@ body.skaiciai-v2 .fact span {
 
 .repertoire { padding-top: 48px; }
 
+/* Tvarkaraščio sąrašo fonas — neutrali pilka (fonas v2), ne kreminis --cream */
+.repertoire.section-alt { background: #f5f5f5; }
+
 .group-head { margin: 56px 0 28px; max-width: 720px; }
 .group-head:first-child { margin-top: 0; }
 
